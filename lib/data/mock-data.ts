@@ -30,7 +30,7 @@ export const fallbackProjects: Project[] = [
     id: '02',
     title: 'EVENT ASSETS',
     subtitle: 'MACH MEETUP',
-    image: ' https://raw.githubusercontent.com/YELrhilassi/st-posts/main/images/tomas-pink.png',
+    image: 'https://raw.githubusercontent.com/YELrhilassi/st-posts/main/images/tomas-pink.png',
     slug: 'mach-meetup',
     description: 'Visual identity and promotional materials for tech conference',
     year: '2023',
@@ -98,6 +98,31 @@ export const fallbackProjects: Project[] = [
       '/placeholder.svg?height=600&width=800',
     ],
   },
+  {
+    id: '05',
+    title: 'NEWSLETTER',
+    subtitle: 'BRANDING',
+    image: 'https://raw.githubusercontent.com/YELrhilassi/st-posts/main/images/tomas-pink.png',
+    slug: 'newsletter-branding',
+    description: 'Visual identity system for digital newsletter',
+    year: '2022',
+    client: 'Edge Digital',
+    role: 'Brand Designer',
+    fullDescription:
+      "Developed a distinctive visual identity for Edge Digital's newsletter, including logo, typography system, and email templates.",
+    challenge:
+      'The newsletter needed to stand out in crowded inboxes while maintaining brand consistency and improving engagement metrics.',
+    solution:
+      'Created a bold, recognizable visual system with a flexible template that could accommodate different content types while maintaining a consistent brand experience.',
+    results:
+      'The redesigned newsletter saw a 35% increase in open rates and a 50% increase in click-through rates within the first three months after launch.',
+    images: [
+      '/placeholder.svg?height=600&width=800',
+      '/placeholder.svg?height=600&width=800',
+      '/placeholder.svg?height=600&width=800',
+    ],
+  },
+
 ];
 
 export const fallbackArtworks: Artwork[] = [

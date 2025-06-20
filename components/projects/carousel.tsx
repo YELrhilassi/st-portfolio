@@ -1,51 +1,19 @@
-'use client';
-
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client"
 import Image from 'next/image';
-import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+
 import { Project } from '@/types/projects';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, useCarousel } from '../ui/carousel';
+import React, { useState } from 'react';
+import { cn } from '@/lib/utils';
+import Link from "next/link"
+import { Button } from '../ui/button';
 
 interface ProjectCarouselProps {
   projects: Project[];
 }
 
 export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-  };
-
-  // useEffect(() => {
-  //   setDirection(1);
-  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  // }, [currentIndex, projects.length]);
-
-  const nextSlide = () => {
-    setDirection(1);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
-  };
+  const [selectedId, setSelectedId] = useState(projects[0].id);
 
   if (projects.length === 0) {
     return (
@@ -54,76 +22,81 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
       </div>
     );
   }
-  console.log(projects);
 
   return (
-    <div className="flex flex-col gap-1">
-      <div className="relative h-[calc(100vh-150px)]  border border-red-400">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={currentIndex}
-            custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: 'spring', stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 },
-            }}
-            className="absolute inset-0 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6"
-          >
-            {projects.map((project) => (
-              <div key={project.id}>
-                <Link href={`/projects/${project.slug}`}>
-                  <div className="relative h-full">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </Link>
-                <div className="flex gap-6">
-                  <div className="font-instrument-serif text-5xl md:text-7xl text-neutral-800">
-                    {project.id}
-                  </div>
-                  <div>
-                    <h2 className="font-varta text-lg md:text-xl font-semibold mt-2">
-                      {project.title}
-                    </h2>
-                    <p className="font-varta text-sm md:text-base text-neutral-600">
-                      {project.subtitle}
-                    </p>
-                  </div>
-                </div>
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="w-full">
+      <CarouselContent className="gap-0">
+        {projects.map(project => (
+          <CarouselItem
+            key={project.id}
+            onMouseEnter={() => setSelectedId(project.id)}
+            className="relative flex flex-col md:basis-1/3 lg:basis-1/4 h-[calc(100vh-10vh)] pl-2 ">
+            <div className='relative group flex-1 hover:cursor-pointer overflow-hidden'>
+              <Link href={`/projects/${project.slug}`} className='h-full block'>
+
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className={
+                    cn("object-cover transition-transform transition-filter duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                      , selectedId === project.id ? "grayscale-0" : "grayscale")}
+                />
+              </Link>
+            </div>
+            <div className="flex gap-6 pl-2">
+              <div className="font-instrument-serif text-5xl text-primary md:text-7xl">
+                {project.id}
               </div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      <div className=" flex justify-between items-center w-full bottom-0 ">
-        <Button
-          onClick={prevSlide}
-          size="icon"
-          variant="outline"
-          className="rounded-full bg-white/80 hover:bg-white"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </Button>
-        <Button
-          onClick={nextSlide}
-          size="icon"
-          variant="outline"
-          className="rounded-full bg-white/80 hover:bg-white"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </Button>
-      </div>
-    </div>
+              <div>
+                <h2 className="font-varta text-lg md:text-xl font-semibold mt-2">
+                  {project.title}
+                </h2>
+                <p className="font-varta text-sm md:text-base text-neutral-600">
+                  {project.subtitle}
+                </p>
+              </div>
+            </div>
+
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+
+      <CarouselNav />
+    </Carousel>
   );
+}
+
+
+function CarouselNav() {
+  const { scrollNext, scrollPrev, canScrollNext, canScrollPrev } = useCarousel()
+
+  return <div className="relative flex justify-between items-center mt-4">
+    <button onClick={scrollPrev} disabled={!canScrollPrev}
+      className='cursor-pointer'>
+      <ArrowLeft className={cn(!canScrollPrev ? "stroke-gray-200" : "")}
+      />
+    </button>
+    <button onClick={scrollNext} disabled={!canScrollNext}
+      className='cursor-pointer'>
+      <ArrowRight className={cn(!canScrollNext ? "stroke-gray-200" : "")} />
+    </button>
+
+  </div>
+}
+
+function ArrowRight({ className }: React.ComponentProps<typeof Button>) {
+  return <svg width="43" height="25" viewBox="0 0 43 25" fill="none" className={cn('stroke-primary', className)} >
+
+    <path d="M1.53516 12.5H41.4637M41.4637 12.5L30.7137 23.25M41.4637 12.5L30.7137 1.75" stroke-width="3.07143" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+}
+function ArrowLeft({ className }: React.ComponentProps<typeof Button>) {
+  return <svg width="43" height="25" viewBox="0 0 43 25" fill="none" className={cn("-scale-100 stroke-primary", className)} >
+    <path d="M1.53516 12.5H41.4637M41.4637 12.5L30.7137 23.25M41.4637 12.5L30.7137 1.75" stroke-width="3.07143" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
 }

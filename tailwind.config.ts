@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -19,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      transitionProperty: {
+        filter: 'filter',
+      },
       fontFamily: {
         "instrument-serif": ["var(--font-instrument-serif)"],
         varta: ["var(--font-varta)"],
@@ -30,10 +32,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+        primary: '#35353F',
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
