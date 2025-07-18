@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -14,21 +13,26 @@ const items = [
 
 export default function Navbar() {
   const pathname = usePathname();
-
+  
   return (
-    <header className="flex items-center w-full h-[18vh]">
-      <div className="container mx-auto px-[4vw] py-[2vh] border-b-2 border-t border-primary">
-        <nav className="flex items-center justify-center gap-[5vw]">
-          <div className="flex items-center space-x-8">
+    <header className="flex items-center w-full min-h-[12vh] h-[clamp(12vh,18vh,20vh)]">
+      <div className="w-full mx-auto px-[clamp(1rem,4vw,8rem)] py-[clamp(1rem,2vh,3rem)] border-b-4 border-t-2 border-primary">
+        <nav className="flex items-center justify-center gap-[clamp(2rem,5vw,8rem)]">
+          {/* Left Navigation Items */}
+          <div className="flex items-center space-x-[clamp(1rem,2vw,3rem)]">
             <NavItem item={items[0]} isActive={pathname === items[0].path} />
             <NavItem item={items[1]} isActive={pathname === items[1].path} />
           </div>
-
+          
+          {/* Logo/Brand */}
           <Link href="/" className="py-4 md:py-0 order-first md:order-none">
-            <h1 className="font-instrument-serif text-4xl md:text-5xl tracking-wide">SOPHIA TAM</h1>
+            <h1 className="font-instrument-serif text-[clamp(2rem,4vw,5rem)] leading-[0.8] tracking-wide whitespace-nowrap">
+              SOPHIA TAM
+            </h1>
           </Link>
-
-          <div className="flex items-center space-x-8">
+          
+          {/* Right Navigation Items */}
+          <div className="flex items-center space-x-[clamp(1rem,2vw,3rem)]">
             <NavItem item={items[2]} isActive={pathname === items[2].path} />
             <NavItem item={items[3]} isActive={pathname === items[3].path} />
           </div>
@@ -43,7 +47,7 @@ function NavItem({ item, isActive }: { item: { name: string; path: string }; isA
     <Link
       href={item.path}
       className={cn(
-        'relative font-varta text-lg transition-colors hover:text-neutral-800',
+        'relative font-varta text-[clamp(0.875rem,1vw,1.125rem)] font-medium transition-colors hover:text-neutral-800',
         isActive ? 'text-neutral-900' : 'text-neutral-500',
       )}
     >

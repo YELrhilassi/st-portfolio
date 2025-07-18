@@ -1,5 +1,5 @@
 import "@/app/globals.css"
-import { Inter, Instrument_Serif,Varta } from "next/font/google"
+import { Inter, Instrument_Serif, Varta } from "next/font/google"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 
@@ -16,14 +16,13 @@ const instrumentSerif = Instrument_Serif({
 
 const varta = Varta({
   subsets: ['latin'],
-  variable:"--font-varta"
+  variable: "--font-varta"
 })
-  
+
 export const metadata = {
   title: "Portfolio | Sophia Tam",
   description: "Portfolio website showcasing artwork and projects",
 }
-
 
 export default function RootLayout({
   children,
@@ -35,11 +34,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${instrumentSerif.variable} ${varta.variable} bg-paper h-full`}
       >
+        <div className="flex flex-col min-h-[103vh] w-full max-w-[min(90vw,2000px)] mx-auto ">
           <Navbar />
-          <main className="flex flex-col min-h-[calc(100vh-19vh)]">{children}</main>
+          <main className="flex-1">
+            {children}
+          </main>
           <Footer />
+        </div>
       </body>
     </html>
   )
 }
-

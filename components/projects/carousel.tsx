@@ -29,39 +29,47 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
         align: "start",
       }}
       className="w-full">
-      <CarouselContent className="gap-0">
+      <CarouselContent className="">
         {projects.map(project => (
           <CarouselItem
             key={project.id}
             onMouseEnter={() => setSelectedId(project.id)}
-            className="relative flex flex-col md:basis-1/3 lg:basis-1/4 h-[calc(100vh-10vh)] pl-2 ">
-            <div className='relative group flex-1 hover:cursor-pointer overflow-hidden'>
-              <Link href={`/projects/${project.slug}`} className='h-full block'>
-
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className={
-                    cn("object-cover transition-transform transition-filter duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                      , selectedId === project.id ? "grayscale-0" : "grayscale")}
-                />
-              </Link>
-            </div>
-            <div className="flex gap-6 pl-2">
-              <div className="font-instrument-serif text-5xl text-primary md:text-7xl">
-                {project.id}
+            className=" basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+          >
+            <div className="flex flex-col h-full">
+              <div className="relative group flex-1 overflow-hidden bg-muted">
+                <div className="aspect-[1/1.9] xl:aspect-[1/1.8] relative">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    className={cn(
+                      "object-cover transition-all duration-700 ease-out cursor-pointer",
+                      "group-hover:scale-105",
+                      selectedId === project.id
+                        ? "grayscale-0 opacity-100"
+                        : "grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
+                    )}
+                  />
+                </div>
               </div>
-              <div>
-                <h2 className="font-varta text-lg md:text-xl font-semibold mt-2">
-                  {project.title}
-                </h2>
-                <p className="font-varta text-sm md:text-base text-neutral-600">
-                  {project.subtitle}
-                </p>
-              </div>
-            </div>
 
+              <div className="flex gap-6 mt-4">
+                <div className="font-instrument-serif text-5xl text-primary md:text-7xl">
+                  {project.id}
+                </div>
+                <div className="flex-1 min-w-0 pt-1">
+                  <h2 className="font-varta text-lg md:text-2xl font-semibold mt-2">
+                    {project.title}
+                  </h2>
+                  <p className="font-varta text-sm md:text-base text-neutral-600">
+                    {project.subtitle}
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
