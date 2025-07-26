@@ -2,8 +2,6 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { fetchProjects } from "@/lib/data/fetchProjects"
-
 
 
 

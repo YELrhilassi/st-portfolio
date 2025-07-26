@@ -7,9 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const items = [
   { name: 'About', path: '/about' },
-  { name: 'Artwork', path: '/artwork' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Other Artwork', path: '/artworks' },
 ];
 
 export default function Navbar() {
@@ -17,11 +15,10 @@ export default function Navbar() {
 
   return (
     <header className="flex items-center w-full h-[18vh]">
-      <div className=" w-full mx-auto px-[4vw] py-[2vh] border-b-4 border-t-2 border-primary">
+      <div className=" w-full mx-auto px-[4vw] py-[2vh] border-b-3 border-t-2 border-primary">
         <nav className="flex items-center justify-center gap-[5vw]">
           <div className="flex items-center space-x-8">
             <NavItem item={items[0]} isActive={pathname === items[0].path} />
-            <NavItem item={items[1]} isActive={pathname === items[1].path} />
           </div>
 
           <Link href="/" className="py-4 md:py-0 order-first md:order-none">
@@ -29,8 +26,7 @@ export default function Navbar() {
           </Link>
 
           <div className="flex items-center space-x-8">
-            <NavItem item={items[2]} isActive={pathname === items[2].path} />
-            <NavItem item={items[3]} isActive={pathname === items[3].path} />
+            <NavItem item={items[1]} isActive={pathname === items[1].path} />
           </div>
         </nav>
       </div>
