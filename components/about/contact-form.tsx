@@ -7,11 +7,13 @@ import { TFormField } from "@/types/about";
 
 export default function ContactForm() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8 flex items-center justify-center" >
-      <div className="w-full max-w-md space-y-12">
+    <div className="min-h-screen flex items-center justify-center" >
+      <div className="w-full max-w-md">
         <div className="space-y-8">
           <FormField label="name" icon={User} placeholder="David Jhon" />
           <FormField type="email" label="email" icon={Mail} placeholder="info@yourmail.com" />
+          <FormField  label="Company" icon={Mail} placeholder="Company name" />
+
         </div>
 
         <div className="pt-8">
@@ -36,15 +38,15 @@ const FormField = ({
     <Label htmlFor={label.toLowerCase()} className="text-lg font-medium text-gray-800 capitalize">
       {label}
     </Label>
-    <div className="relative">
-      {Icon ? <Icon className="absolute left-0 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" /> : null}
+    <div className="relative flex items-center">
+      {Icon ? <Icon className="absolute ml-4 -translate-y-1 h-5 w-5 text-gray-400" /> : null}
       <Input
         id={label.toLowerCase()}
         type={type}
         placeholder={placeholder}
-        className="pl-8 border-0 border-b-2 border-gray-400 
-          rounded-none bg-transparent focus:border-gray-600 focus:ring-0 
-          text-gray-600 placeholder:text-gray-400"
+        className="px-12 py-8 border-0 border-b-2 border-gray-400 
+          rounded-none bg-transparent focus:ring-0 focus-visible:ring-0
+          placeholder:text-gray-400"
       />
     </div>
   </div>
