@@ -15,4 +15,4 @@ export type TGithubFile = {
   };
 };
 
-export type TGithubFolder = 'projects' | 'artworks';
+export type TGithubFolder = 'projects' | 'artworks' | 'about';

@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="flex items-center w-full h-[18vh]">
+    <header className="flex items-center w-full h-[10vh] mt-8">
       <div className=" w-full mx-auto px-[4vw] py-[2vh] border-b-3 border-t-2 border-primary">
         <nav className="flex items-center justify-center gap-[5vw]">
           <div className="flex items-center space-x-8">
