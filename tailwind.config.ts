@@ -23,6 +23,7 @@ const config = {
       },
       fontFamily: {
         "instrument-serif": ["var(--font-instrument-serif)"],
+        serif: ["var(--font-instrument-serif)"],
         varta: ["var(--font-varta)"],
         inter: ["var(--font-inter)"],
       },
