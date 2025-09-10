@@ -131,7 +131,7 @@ const MasonryCard = ({ data, width }: any) => {
 
 export default function ProjectPage() {
   const containerRef = useRef<any>(null);
-  const [windowWidth, windowHeight] = useWindowSize();
+  const [windowWidth] = useWindowSize();
   const [containerWidth, setContainerWidth] = useState(0);
 
   // Calculate container width on resize and mount
