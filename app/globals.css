@@ -146,3 +146,19 @@ html,body {
   font-family: var(--font-inter);
 }
 
+
+
+@layer utilities {
+  .masonry-grid {
+    position: relative;
+  }
+
+  .masonry-sizer {
+    width: 50%; /* 2 columns by default */
+  }
+
+  .masonry-item {
+    float: left;
+    margin-bottom: 16px;
+  }
+}

@@ -1,4 +1,5 @@
 import { Artwork, Project } from '@/types';
+import { TProject } from './projects';
 
 // Fallback data for development
 export const fallbackProjects: Project[] = [
@@ -125,117 +126,239 @@ export const fallbackProjects: Project[] = [
 
 ];
 
-export const fallbackArtworks: Artwork[] = [
+
+export const mockProjects: TProject[] = [
   {
     id: 1,
-    title: 'Warrior Spirit',
-    slug: 'warrior-spirit',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2023',
-    medium: 'Digital Painting',
-    description:
-      'A vibrant digital painting exploring themes of strength and resilience through a modern interpretation of traditional warrior imagery.',
-    dimensions: '3000 x 4000 px',
-    process:
-      'Created using Procreate on iPad Pro with Apple Pencil, this piece took approximately 40 hours to complete over the span of two weeks.',
-    category: 'digital',
+    slug: "thomas-pink-brand-identity",
+    title: "Thomas Pink",
+    subtitle: "Brand Identity Redesign",
+    description: "A comprehensive brand identity redesign for Thomas Pink, focusing on modern minimalism while honoring the brand's heritage in luxury menswear.",
+    category: "Case study",
+    tags: ["Branding", "Fashion", "Luxury", "Print Design"],
+    featured: true,
+    publishedAt: "2024-01-15",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=1000&fit=crop",
+    imageAlt: "Thomas Pink brand identity overview",
+    sections: [
+      {
+        id: 1,
+        text: `<h3>Project Overview</h3>
+        <p>Thomas Pink approached us with a clear vision: to modernize their brand identity while maintaining the sophisticated elegance that has defined them for decades. The challenge was to create a system that would resonate with both their loyal customer base and attract a new generation of discerning gentlemen.</p>
+        
+        <p>Our approach focused on stripping away unnecessary elements while amplifying the core brand values of quality, craftsmanship, and timeless style. The result is a refined visual language that speaks to the brand's British heritage while embracing contemporary design principles.</p>`,
+        image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&h=800&fit=crop",
+        imageAlt: "Thomas Pink logo design variations"
+      },
+      {
+        id: 2,
+        text: `<h3>Design Philosophy</h3>
+        <p>The new identity centers around the concept of "refined simplicity" - a design philosophy that emphasizes clean lines, thoughtful typography, and purposeful use of space. Every element serves a function while contributing to the overall aesthetic harmony.</p>
+        
+        <p>We developed a comprehensive color palette that moves beyond the traditional pink, incorporating sophisticated neutrals and accent colors that reflect the modern gentleman's wardrobe. The typography system balances classic serif forms with contemporary sans-serif options, creating hierarchy and personality across all touchpoints.</p>`,
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop",
+        imageAlt: "Color palette and typography exploration"
+      },
+      {
+        id: 3,
+        text: `<h3>Implementation & Results</h3>
+        <p>The rollout included everything from business cards and packaging to digital interfaces and retail environments. Each application was carefully considered to ensure consistency while allowing for medium-specific optimizations.</p>
+        
+        <p>The response from both internal stakeholders and customers has been overwhelmingly positive. Sales have increased by 23% in the first quarter following the rebrand, and customer surveys indicate a significant improvement in brand perception among the target demographic.</p>
+        
+        <p>Most importantly, the new identity has given Thomas Pink the tools to evolve and grow while staying true to their core values. It's a brand system built for longevity, capable of adapting to future challenges while maintaining its distinctive character.</p>`,
+        image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=800&fit=crop",
+        imageAlt: "Final brand applications and packaging"
+      }
+    ]
   },
   {
     id: 2,
-    title: 'Red Portrait',
-    slug: 'red-portrait',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2023',
-    medium: 'Digital Painting',
-    description:
-      'A bold portrait study exploring color theory and emotional expression through the dominant use of red tones.',
-    dimensions: '2500 x 3000 px',
-    process:
-      'This portrait was created in Photoshop using a combination of digital brushes to achieve a painterly effect while maintaining precise control over the color palette.',
-    category: 'portrait',
+    slug: "aurora-wellness-app",
+    title: "Aurora",
+    subtitle: "Wellness Mobile Application",
+    description: "A comprehensive wellness platform that combines mindfulness, fitness tracking, and personalized health insights in an intuitive mobile experience.",
+    category: "UX/UI Design",
+    tags: ["Mobile App", "Wellness", "User Experience", "Health Tech"],
+    featured: true,
+    publishedAt: "2024-02-20",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=1000&fit=crop",
+    imageAlt: "Aurora wellness app interface",
+    sections: [
+      {
+        id: 4,
+        text: `<h3>Understanding the Challenge</h3>
+        <p>The wellness market is saturated with apps that focus on single aspects of health - meditation apps, fitness trackers, nutrition counters. Aurora's vision was to create a holistic platform that seamlessly integrates all aspects of wellness without overwhelming the user.</p>
+        
+        <p>Through extensive user research, we discovered that people wanted simplicity above all else. They were tired of juggling multiple apps and wanted a single, beautiful interface that could guide them on their wellness journey. The challenge was creating this unified experience without sacrificing depth or functionality.</p>`,
+        image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=800&fit=crop",
+        imageAlt: "User research and wireframes"
+      },
+      {
+        id: 5,
+        text: `<h3>Design Process</h3>
+        <p>We began with a comprehensive audit of existing wellness apps, identifying pain points and opportunities for innovation. Our design philosophy centered on "calm technology" - interfaces that provide information and functionality without creating anxiety or overwhelm.</p>
+        
+        <p>The visual design draws inspiration from natural elements, using organic shapes, gentle gradients, and a color palette inspired by sunrise and sunset. Every interaction was carefully choreographed to feel natural and encouraging, turning healthy habits into delightful moments.</p>
+        
+        <p>Accessibility was a core consideration from day one. We ensured the app works beautifully for users with various needs, incorporating features like voice guidance, high contrast modes, and simplified navigation patterns.</p>`,
+        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=800&fit=crop",
+        imageAlt: "App interface design and user flow"
+      },
+      {
+        id: 6,
+        text: `<h3>Impact & Success Metrics</h3>
+        <p>Aurora launched to critical acclaim, earning features in the App Store and recognition from design communities worldwide. More importantly, it's making a real difference in users' lives.</p>
+        
+        <p>User engagement metrics exceeded all projections, with an average session time of 12 minutes and a retention rate of 68% after 30 days. Users report feeling more in control of their wellness journey and appreciate the app's non-judgmental approach to health tracking.</p>
+        
+        <p>The modular design system we created has enabled the Aurora team to rapidly iterate and add new features while maintaining consistency. It's a living platform that continues to evolve with its users' needs.</p>`,
+        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=800&fit=crop",
+        imageAlt: "App success metrics and user testimonials"
+      }
+    ]
   },
   {
     id: 3,
-    title: 'Sketch Study',
-    slug: 'sketch-study',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2022',
-    medium: 'Pencil Drawing',
-    description:
-      'A detailed pencil study focusing on facial expressions and the interplay of light and shadow.',
-    dimensions: '8.5 x 11 inches',
-    process:
-      "Created using graphite pencils of varying hardness on heavyweight drawing paper, with particular attention to capturing the subtle nuances of the subject's expression.",
-    category: 'sketch',
+    slug: "meridian-architecture-website",
+    title: "Meridian Architecture",
+    subtitle: "Digital Portfolio & Brand Experience",
+    description: "A sophisticated web presence for a boutique architecture firm, showcasing their portfolio through immersive storytelling and elegant visual design.",
+    category: "Web Design",
+    tags: ["Website", "Architecture", "Portfolio", "Brand Experience"],
+    featured: false,
+    publishedAt: "2023-11-08",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=1000&fit=crop",
+    imageAlt: "Meridian Architecture website homepage",
+    sections: [
+      {
+        id: 7,
+        text: `<h3>Architectural Storytelling</h3>
+        <p>Architecture is about more than buildings - it's about creating spaces that enhance human experience. Meridian Architecture needed a digital presence that could convey this philosophy while showcasing their exceptional portfolio of residential and commercial projects.</p>
+        
+        <p>Our approach was to treat the website itself as an architectural space, with careful attention to proportion, light, and movement. Each project is presented as a journey, with photography, drawings, and narrative coming together to tell the complete story of each design.</p>`,
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=800&fit=crop",
+        imageAlt: "Architecture project showcase layout"
+      },
+      {
+        id: 8,
+        text: `<h3>Technical Excellence</h3>
+        <p>The website leverages cutting-edge web technologies to create smooth, engaging interactions without compromising performance. Large-format images load seamlessly, animations feel natural, and the experience adapts beautifully across all devices.</p>
+        
+        <p>We implemented a custom content management system that allows the Meridian team to easily update their portfolio while maintaining the site's sophisticated design standards. The backend is optimized for SEO and fast loading times, ensuring the beautiful design reaches the widest possible audience.</p>`,
+        image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=800&fit=crop",
+        imageAlt: "Technical architecture and responsive design"
+      },
+      {
+        id: 9,
+        text: `<h3>Results & Recognition</h3>
+        <p>The new website has become a powerful business development tool for Meridian, leading to a 45% increase in qualified leads and several high-profile project commissions. The site has been featured in design galleries and won recognition from industry organizations.</p>
+        
+        <p>Beyond metrics, the website has helped establish Meridian as a thought leader in sustainable design. Their blog posts and case studies now reach thousands of readers monthly, positioning them at the forefront of architectural innovation.</p>`,
+        image: "https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=600&h=800&fit=crop",
+        imageAlt: "Website analytics and recognition awards"
+      }
+    ]
   },
   {
     id: 4,
-    title: 'Academy Girl',
-    slug: 'academy-girl',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2022',
-    medium: 'Digital Painting',
-    description:
-      'A character design exploring themes of youth, academia, and coming-of-age narratives.',
-    dimensions: '3000 x 4000 px',
-    process:
-      'This piece was developed through multiple concept sketches before the final rendering in Clip Studio Paint, with a focus on costume design and character expression.',
-    category: 'character',
+    slug: "bloom-restaurant-identity",
+    title: "Bloom",
+    subtitle: "Restaurant Brand & Interior Design",
+    description: "A complete brand and spatial experience for a farm-to-table restaurant, celebrating the connection between food, community, and the natural world.",
+    category: "Brand Identity",
+    tags: ["Branding", "Restaurant", "Interior Design", "Sustainability"],
+    featured: true,
+    publishedAt: "2024-03-10",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=1000&fit=crop",
+    imageAlt: "Bloom restaurant interior and branding",
+    sections: [
+      {
+        id: 10,
+        text: `<h3>Cultivating Connection</h3>
+        <p>Bloom represents a new generation of restaurants that prioritize sustainability, community, and authentic experiences over trendy aesthetics. The brand needed to communicate these values while appealing to discerning diners who appreciate both exceptional food and thoughtful design.</p>
+        
+        <p>Our brand strategy centered on the concept of growth and renewal - the idea that every meal is an opportunity to nourish both body and soul. This philosophy influenced everything from the logo design to the selection of materials and the layout of the dining space.</p>`,
+        image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&h=800&fit=crop",
+        imageAlt: "Bloom brand identity and logo development"
+      },
+      {
+        id: 11,
+        text: `<h3>Spatial Harmony</h3>
+        <p>The interior design creates an environment that feels both sophisticated and welcoming, like dining in a beautifully tended garden. Natural materials, living plants, and carefully curated lighting create an atmosphere that changes subtly throughout the day.</p>
+        
+        <p>We worked closely with local artisans to create custom furniture and fixtures that reflect the restaurant's commitment to supporting the community. Every element tells a story, from the reclaimed wood tables to the hand-thrown ceramic plates that showcase each dish.</p>
+        
+        <p>The open kitchen design allows diners to witness the culinary artistry while maintaining an intimate dining atmosphere. Strategic sight lines and acoustic treatments ensure that the energy of food preparation enhances rather than overwhelms the dining experience.</p>`,
+        image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&h=800&fit=crop",
+        imageAlt: "Restaurant interior design and custom furniture"
+      },
+      {
+        id: 12,
+        text: `<h3>A Living Brand</h3>
+        <p>Six months after opening, Bloom has become a cornerstone of the local dining scene. The restaurant consistently operates at capacity, with a waiting list that extends weeks in advance. More importantly, it has fostered genuine connections between diners, local farmers, and the broader community.</p>
+        
+        <p>The brand extends beyond the physical space through carefully crafted packaging, a cookbook featuring seasonal recipes, and workshops that teach sustainable cooking techniques. Bloom has become not just a restaurant, but a movement toward more conscious dining.</p>`,
+        image: "https://images.unsplash.com/photo-1515669097368-22e68427d265?w=600&h=800&fit=crop",
+        imageAlt: "Restaurant success and community impact"
+      }
+    ]
   },
   {
     id: 5,
-    title: 'Moonlight Samurai',
-    slug: 'moonlight-samurai',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2021',
-    medium: 'Digital Painting',
-    description:
-      'An atmospheric piece depicting a samurai silhouetted against a full moon, exploring themes of solitude and honor.',
-    dimensions: '4000 x 3000 px',
-    process:
-      'Created in Photoshop with a focus on atmospheric lighting and silhouette design. The piece went through several iterations to achieve the right balance of mystery and clarity.',
-    category: 'illustration',
-  },
-  {
-    id: 6,
-    title: 'Blue Portrait',
-    slug: 'blue-portrait',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2021',
-    medium: 'Digital Painting',
-    description:
-      'A contemplative portrait study using a cool blue color palette to evoke a sense of calm introspection.',
-    dimensions: '2400 x 3200 px',
-    process:
-      'This portrait was painted digitally using a limited color palette to explore how color temperature affects mood and perception of the subject.',
-    category: 'portrait',
-  },
-  {
-    id: 7,
-    title: 'Fantasy Castle',
-    slug: 'fantasy-castle',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2020',
-    medium: 'Digital Painting',
-    description:
-      'A whimsical illustration of a Japanese-inspired castle floating among cherry blossoms, blending traditional architecture with fantasy elements.',
-    dimensions: '4000 x 3000 px',
-    process:
-      'This environment piece was created in Procreate, starting with architectural reference studies before developing the fantastical elements and atmospheric effects.',
-    category: 'environment',
-  },
-  {
-    id: 8,
-    title: 'Magical Couple',
-    slug: 'magical-couple',
-    image: '/placeholder.svg?height=500&width=500',
-    year: '2020',
-    medium: 'Digital Painting',
-    description:
-      'A playful illustration of a young couple with magical elements, exploring themes of connection and whimsy.',
-    dimensions: '3500 x 4000 px',
-    process:
-      'This illustration was developed through character sketches and color studies before the final rendering, with particular attention to the interaction between the two characters.',
-    category: 'character',
-  },
+    slug: "nova-startup-identity",
+    title: "Nova",
+    subtitle: "Tech Startup Brand Identity",
+    description: "A forward-thinking brand identity for a fintech startup focused on making investment accessible to everyone, combining trust with innovation.",
+    category: "Brand Identity",
+    tags: ["Startup", "Fintech", "Logo Design", "Digital Brand"],
+    featured: false,
+    publishedAt: "2023-09-22",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=1000&fit=crop",
+    imageAlt: "Nova fintech brand identity",
+    sections: [
+      {
+        id: 13,
+        text: `<h3>Democratizing Finance</h3>
+        <p>Nova entered the crowded fintech space with a mission to make sophisticated investment strategies accessible to everyday people. The challenge was creating a brand that conveyed both trustworthiness and innovation - appearing established enough to handle people's money while dynamic enough to disrupt traditional finance.</p>
+        
+        <p>Our research revealed that potential users were intimidated by existing investment platforms, which either looked too corporate and complex or too simplistic and unprofessional. Nova needed to strike the perfect balance: approachable yet sophisticated, friendly yet secure.</p>`,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=800&fit=crop",
+        imageAlt: "Market research and brand positioning"
+      },
+      {
+        id: 14,
+        text: `<h3>Visual Innovation</h3>
+        <p>The Nova identity system builds on the concept of growth and expansion - the idea that smart investments can help people reach their full potential. The logo combines geometric precision with organic growth patterns, suggesting both stability and possibility.</p>
+        
+        <p>The color palette balances trust-building blues with energizing accent colors, while the typography system pairs a reliable sans-serif for body text with a more distinctive display font for headlines and key messaging. Interactive elements use subtle animations that feel confident rather than flashy.</p>`,
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=800&fit=crop",
+        imageAlt: "Brand identity system and applications"
+      },
+      {
+        id: 15,
+        text: `<h3>Market Impact</h3>
+        <p>Nova's thoughtful brand positioning helped them stand out in a competitive market, leading to successful Series A funding and rapid user acquisition. The brand has been featured in major business publications and recognized for its innovative approach to financial design.</p>
+        
+        <p>User testing consistently shows high brand affinity scores, with customers citing Nova's approachable yet professional image as a key factor in their decision to invest. The brand system has scaled successfully across web, mobile, and marketing applications while maintaining consistency and impact.</p>`,
+        image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&h=800&fit=crop",
+        imageAlt: "App interface and user testimonials"
+      }
+    ]
+  }
 ];
+
+// Helper function to get project by slug (for testing without GitHub API)
+export function getMockProjectBySlug(slug: string): TProject | null {
+  return mockProjects.find(project => project.slug === slug) || null;
+}
+
+// Helper function to get all mock projects
+export function getAllMockProjects(): TProject[] {
+  return mockProjects;
+}
+
+// Helper function to get featured projects
+export function getFeaturedMockProjects(): TProject[] {
+  return mockProjects.filter(project => project.featured);
+}
