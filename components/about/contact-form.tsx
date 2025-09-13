@@ -2,12 +2,14 @@ import { Mail, User } from "lucide-react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { TFormField } from "@/types/about";
+import { Button } from "../ui/button";
 
 export default function ContactForm() {
   return (
-      <div className="w-full">
-        <div className="space-y-8">
-          <FormField label="name" icon={User} placeholder="David Jhon"  />
+    <div className="flex-1 w-full pr-12">
+      <form>
+        <div className="space-y-8 w-full">
+          <FormField label="full name" icon={User} placeholder="David Jhon" />
           <FormField
             type="email"
             label="email"
@@ -15,8 +17,15 @@ export default function ContactForm() {
             placeholder="info@yourmail.com"
           />
           <FormField label="Company" icon={Mail} placeholder="Company name" />
+          <FormField label="Message" placeholder="" />
+          <div className="flex">
+            <Button className="pt-7 pb-6 m-auto w-1/2 text-2xl font-extrabold rounded-full border-0 cursor-pointer ">
+              Contact Us
+            </Button>
+          </div>
         </div>
-      </div>
+      </form>
+    </div>
   );
 }
 
@@ -26,7 +35,7 @@ const FormField = ({
   type = "text",
   placeholder,
 }: TFormField) => (
-  <div className="space-y-3">
+  <div className="">
     <Label
       htmlFor={label.toLowerCase()}
       className="text-lg font-medium text-gray-800 capitalize"

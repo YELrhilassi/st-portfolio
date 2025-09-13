@@ -34,7 +34,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${instrumentSerif.variable} ${varta.variable} bg-paper h-full`}
       >
-        <div className="flex flex-col min-h-[103vh] w-full max-w-[min(90vw,2000px)] mx-auto ">
+        <div className="relative flex flex-col min-h-[103vh] w-full max-w-[min(90vw,2000px)] mx-auto ">
           <Navbar />
           <main className="flex-1 flex flex-col">
             {children}
