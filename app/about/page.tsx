@@ -9,7 +9,7 @@ export default async function AboutPage() {
   const { h1, description, image, imageAlt, formFooter } = data as TAbout;
 
   return (
-    <main className="grid grid-cols-[1fr_auto_1fr] gap-14 min-h-screen">
+    <div className="grid grid-cols-[1fr_auto_1fr] gap-14 min-h-screen">
       {/* Left side */}
       <section className="flex flex-col pt-[12vh]">
         <div className="flex gap-4 -mb-20 z-10">
@@ -39,6 +39,6 @@ export default async function AboutPage() {
           </h1>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
