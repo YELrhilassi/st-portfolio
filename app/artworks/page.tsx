@@ -128,11 +128,11 @@ export default function GalleryPage() {
             {/* Overlay */}
             <div className="absolute w-full h-full opacity-0 bottom-0  group-hover:opacity-100 transition-opacity duration-500">
               <div className="flex  items-end h-full gap-2 w-full p-3 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
-                <div className="flex gap-2">
+                <div className="flex justify-end items-center w-full divide-white divide-x py-0">
                   {img.tags.map((tag, t) => (
-                    <Badge key={t} variant="outline" className="flex items-start justify-baseline px-4 pt-1 rounded-full text-white text-base font-bold" >
-                      {tag}
-                    </Badge>
+                      <span key={t} className="px-2 text-white font-bold leading-4" >
+                        {tag}
+                      </span>
                   ))}
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function GalleryPage() {
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white text-4xl cursor-pointer" 
+            className="absolute top-4 right-4 text-white text-4xl cursor-pointer"
             onClick={() => setSelectedImage(null)}
           >
             ✕
