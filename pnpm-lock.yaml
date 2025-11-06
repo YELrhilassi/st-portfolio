@@ -71,6 +71,9 @@ importers:
       react-masonry-css:
         specifier: ^1.0.16
         version: 1.0.16(react@19.1.0)
+      react-peel:
+        specifier: ^2.0.0
+        version: 2.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       tailwind-merge:
         specifier: ^3.3.0
         version: 3.3.0
@@ -969,6 +972,12 @@ packages:
     peerDependencies:
       react: '>=16.0.0'
 
+  react-peel@2.0.0:
+    resolution: {integrity: sha512-zF9sqnAXH6AMsaI0efv89i8MvPj7swch2XK9KLyZ9SSg1Y/WwjXeXG99p8yMjUdx5wjaz7Rz5mPe/0DdkxBdig==}
+    peerDependencies:
+      react: 16.8.0 || >=17.x
+      react-dom: 16.8.0 || >=17.x
+
   react-remove-scroll-bar@2.3.8:
     resolution: {integrity: sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==}
     engines: {node: '>=10'}
@@ -1827,6 +1836,11 @@ snapshots:
   react-masonry-css@1.0.16(react@19.1.0):
     dependencies:
       react: 19.1.0
+
+  react-peel@2.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   react-remove-scroll-bar@2.3.8(@types/react@19.1.6)(react@19.1.0):
     dependencies:

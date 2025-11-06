@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   eslint: {
@@ -20,6 +21,14 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/st-posts/:path*',
+        destination: process.env.NODE_ENV === 'development' ? path.join(process.cwd(), '..', 'st-posts', ':path*') : '/404',
+      },
+    ];
   },
 };
 

@@ -130,7 +130,7 @@ export default function GalleryPage() {
               <div className="flex  items-end h-full gap-2 w-full p-3 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
                 <div className="flex justify-end items-center w-full divide-white divide-x py-0">
                   {img.tags.map((tag, t) => (
-                      <span key={t} className="px-2 text-white font-bold leading-4" >
+                      <span key={t} className="px-2 text-white font-bold py-0" >
                         {tag}
                       </span>
                   ))}

@@ -31,6 +31,10 @@ export async function fetchFileContent(url: string, fileName: string): Promise<s
   return response.text();
 }
 
+export function parseContentLinks(content: string): string {
+  return content.replace(/\(@(\w+):([\w-]+)\)/g, '/$1/$2');
+}
+
 export class GitApiError extends Error {
   constructor(
     message: string,
