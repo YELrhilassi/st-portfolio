@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Varta, Instrument_Serif } from "next/font/google";
+import { Varta, Instrument_Serif, EB_Garamond } from "next/font/google";
 import "@/globals.css";
+import Header from "@/components/layout/header";
 
 const varta = Varta({
   subsets: ["latin"],
@@ -12,6 +13,13 @@ const instrument = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
   variable: "--font-instrument",
+});
+
+const ui = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-ui",
 });
 
 export const metadata: Metadata = {
@@ -27,9 +35,12 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${varta.variable} ${instrument.variable} antialiased`}
+      className={`${varta.variable} ${instrument.variable} ${ui.variable} antialiased`}
     >
-      <body className="relative w-lvw h-dvh bg-[#e8e8e8]">{children}</body>
+      <body className="text-primary">
+        <Header />
+        <main className="relative max-w-7xl mx-auto">{children}</main>
+      </body>
     </html>
   );
 }

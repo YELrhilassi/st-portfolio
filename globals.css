@@ -2,12 +2,16 @@
 @import "normalize.css";
 
 @theme {
-  --font-instrument: var(--font-instrument);
-  --font-varta: var(--font-varta);
+  --font-sans: var(--font-varta);
+  --font-serif: var(--font-instrument);
+  --font-ui: var(--font-ui);
+  /* Custom Colors */
+  --color-primary: #35353f;
+  --color-secondary: #d8d8d8;
 }
 
 body {
-  font-family: var(--font-varta);
+  font-family: var(--font-sans);
   background-color: #e8e8e8;
   background-image:
     url("/wall-4-light.png"), url("/texturetastic-gray.png"),
@@ -20,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-instrument);
+  font-family: var(--font-serif);
   padding: 0;
   margin: 0;
 }
