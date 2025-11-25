@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "normalize.css";
+
+@theme {
+  --font-instrument: var(--font-instrument);
+  --font-varta: var(--font-varta);
+}
+
+body {
+  font-family: var(--font-varta);
+  background-color: #e8e8e8;
+  background-image:
+    url("/wall-4-light.png"), url("/texturetastic-gray.png"),
+    url("/paper_fibers.png");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-instrument);
+  padding: 0;
+  margin: 0;
+}
