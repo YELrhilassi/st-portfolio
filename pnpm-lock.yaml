@@ -23,6 +23,9 @@ importers:
       react-dom:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
+      react-peel:
+        specifier: ^2.0.0
+        version: 2.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.2.0
@@ -621,6 +624,12 @@ packages:
     peerDependencies:
       react: ^19.2.0
 
+  react-peel@2.0.0:
+    resolution: {integrity: sha512-zF9sqnAXH6AMsaI0efv89i8MvPj7swch2XK9KLyZ9SSg1Y/WwjXeXG99p8yMjUdx5wjaz7Rz5mPe/0DdkxBdig==}
+    peerDependencies:
+      react: 16.8.0 || >=17.x
+      react-dom: 16.8.0 || >=17.x
+
   react@19.2.0:
     resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
     engines: {node: '>=0.10.0'}
@@ -1114,6 +1123,11 @@ snapshots:
     dependencies:
       react: 19.2.0
       scheduler: 0.27.0
+
+  react-peel@2.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
 
   react@19.2.0: {}
 

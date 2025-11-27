@@ -1,13 +1,17 @@
 import { cn } from "../utils/cn";
 
-type TGridWrapper = {
+type TGridWrapper = React.ComponentProps<"div"> & {
   children: React.ReactNode;
-  className?: React.ComponentProps<"div">["className"];
 };
 
 export default function GridWrapper({
   children,
   className: clx,
+  ...rest
 }: TGridWrapper) {
-  return <div className={cn("grid grid-cols-6 gap-0", clx)}>{children}</div>;
+  return (
+    <div className={cn("grid grid-cols-6 gap-0 h-fit", clx)} {...rest}>
+      {children}
+    </div>
+  );
 }

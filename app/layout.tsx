@@ -37,9 +37,10 @@ export default async function RootLayout({
       lang="en"
       className={`${varta.variable} ${instrument.variable} ${ui.variable} antialiased`}
     >
-      <body className="text-primary">
-        <Header />
-        <main className="relative max-w-7xl mx-auto mt-6">{children}</main>
+      <body className="text-primary max-w-7xl mx-auto">
+        <Header className="mt-8 " />
+        <main className="relative mt-6">{children}</main>
+        <div className="relative h-40"></div>
       </body>
     </html>
   );
