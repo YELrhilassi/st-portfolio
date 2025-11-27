@@ -14,11 +14,9 @@ type TFlyerTab = {
   isStatic?: boolean;
 };
 
-const peels = [LargeStaticPeel, MediumStaticPeel, SmallStaticPeel];
-
 export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
   const [isOpened, setIsOpened] = useState(false);
-  const [selected, setSelected] = useState<number>(0);
+
   //
   //
   const isPeelOpenedRef = useRef<boolean>(false);
@@ -46,50 +44,42 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
       }, 1000);
     }
   };
-  useEffect(() => {
-    setSelected(Math.floor(Math.random() * peels.length));
-  }, []);
-  const SelectedPeel = peels[selected];
   return (
-    <div className="relative">
-      {!isStatic ? (
-        <PeelWrapper
-          ref={peelWrapperRef}
-          width={100}
-          height={260}
-          options={{
-            backShadowAlpha: 0.1,
-            bottomShadowDarkAlpha: 0.1,
-            bottomShadowLightAlpha: 0,
-          }}
-          corner="BOTTOM_LEFT"
-          constraints={["TOP_RIGHT", { x: 50, y: 0 }]}
-          peelPosition={{ x: 7, y: 230 }}
-          handleDrag={handlePeelDrag}
-          drag
-        >
-          <PeelTop className="shadow-lg p-3 pt-4 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply">
-            <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
-              <span>Also</span>
-              <span>Find me</span>
-              <span>At:</span>
-            </p>
-            <div
-              className={`flex flex-col items-center justify-end gap-12
+    <>
+      <PeelWrapper
+        ref={peelWrapperRef}
+        width={100}
+        height={260}
+        options={{
+          backShadowAlpha: 0.1,
+          bottomShadowDarkAlpha: 0.1,
+          bottomShadowLightAlpha: 0,
+        }}
+        corner="BOTTOM_LEFT"
+        constraints={["TOP_RIGHT", { x: 50, y: 0 }]}
+        peelPosition={{ x: 7, y: 230 }}
+        handleDrag={handlePeelDrag}
+        drag
+      >
+        <PeelTop className="shadow-lg p-3 pt-4 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply">
+          <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
+            <span>Also</span>
+            <span>Find me</span>
+            <span>At:</span>
+          </p>
+          <div
+            className={`flex flex-col items-center justify-end gap-12
               text-gray-700
               w-full h-40
               `}
-            >
-              <div className="text-lg font-bold -rotate-90">{handle}</div>
-              <div className="text-gray-700">{icon}</div>
-            </div>
-          </PeelTop>
-          <PeelBack ref={backPeelRef} className={cn("relative bg-pink-100")} />
-        </PeelWrapper>
-      ) : (
-        <SelectedPeel handle={handle} icon={icon} />
-      )}
+          >
+            <div className="text-lg font-bold -rotate-90">{handle}</div>
+            <div className="text-gray-700">{icon}</div>
+          </div>
+        </PeelTop>
+        <PeelBack ref={backPeelRef} className={cn("relative bg-pink-100")} />
+      </PeelWrapper>
       {isOpened ? <SmallStaticPeel /> : null}
-    </div>
+    </>
   );
 }
