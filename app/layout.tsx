@@ -39,7 +39,7 @@ export default async function RootLayout({
     >
       <body className="text-primary">
         <Header />
-        <main className="relative max-w-7xl mx-auto">{children}</main>
+        <main className="relative max-w-7xl mx-auto mt-6">{children}</main>
       </body>
     </html>
   );

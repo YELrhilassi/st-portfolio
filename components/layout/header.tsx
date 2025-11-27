@@ -19,7 +19,7 @@ export default function Header({ className: clx }: THeader) {
           <a>About</a>
           <a>Artwork</a>
         </ul>
-        <div className="flex-2 flex justify-around  border-x">
+        <div className="flex-2 flex justify-around border-x">
           <Link href="/" className="text-5xl font-serif">
             Sophia Tam
           </Link>
