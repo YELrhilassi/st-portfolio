@@ -1,7 +1,7 @@
 export function SmallStaticPeel() {
   return (
     <div className="absolute top-0 h-[30] w-[100] bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path16.svg)] mask-no-repeat mask-cover">
-      <div className="w-full h-[70%] bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path16.svg)] mask-no-repeat mask-cover " />
+      <div className="w-full h-[70%] bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path16.svg)] mask-no-repeat mask-cover " />
     </div>
   );
 }
@@ -15,7 +15,7 @@ export function MediumStaticPeel({
 }) {
   return (
     <div className="absolute top-0 h-[163] w-[100] bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path18-back.svg)] mask-no-repeat">
-      <div className="w-full h-[160] shadow-lg p-3 pt-4 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path18.svg)] mask-no-repeat">
+      <div className="w-full h-[160] shadow-lg p-3 pt-4 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path18.svg)] mask-no-repeat">
         <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
           <span>Also</span>
           <span>Find me</span>
@@ -40,7 +40,7 @@ export function LargeStaticPeel({
 }) {
   return (
     <div className="absolute top-0 h-[267] w-[100] bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path17-back.svg)] mask-no-repeat">
-      <div className="w-full h-[262] shadow-lg p-3 pt-4 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path17.svg)] mask-no-repeat">
+      <div className="w-full h-[262] shadow-lg p-3 pt-4 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply mask-[url(/path17.svg)] mask-no-repeat">
         <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
           <span>Also</span>
           <span>Find me</span>

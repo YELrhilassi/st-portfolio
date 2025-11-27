@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutBio() {
   return (
     <>
-      <h1 className="text-6xl w-full mb-6 font-bold font-serif uppercase">
+      <h1 className="text-6xl w-full mb-6 font-serif uppercase">
         Hi, I'm sophia,
       </h1>
       <div className="space-y-4 text-lg">

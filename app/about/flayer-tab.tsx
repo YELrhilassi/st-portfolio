@@ -61,7 +61,7 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
         handleDrag={handlePeelDrag}
         drag
       >
-        <PeelTop className="shadow-lg p-3 pt-4 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply">
+        <PeelTop className="shadow-lg p-3 pt-4 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply">
           <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
             <span>Also</span>
             <span>Find me</span>

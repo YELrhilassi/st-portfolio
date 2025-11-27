@@ -40,10 +40,9 @@ export default function About() {
       ),
     );
   }, []);
-
   return (
-    <GridWrapper className="grid-rows-[repeat(2,auto)]">
-      <div className="col-span-full p-4 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply shadow-lg">
+    <GridWrapper className="grid-rows-[repeat(2,auto)] mt-20">
+      <div className="col-span-full p-4 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply shadow-lg">
         <div className="flex p-8 py-12 bg-[url(/paper_fibers.png)] bg-repeat">
           <div className="w-[300] h-[440]">
             <AboutFigure />
@@ -57,15 +56,18 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="col-span-full h-fit">
-        <div className="flex justify-center items-center gap-4 h-12 border-b-2 border-dashed border-gray-400 bg-pink-200 bg-[url(/paper_fibers.png)] bg-blend-multiply">
+      <div className="relative col-span-full h-fit">
+        <div className="flex justify-center items-center gap-4 h-12 border-b-2 border-dashed border-gray-400 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply">
           <Scissors className="w-4 p-0 -translate-y-px " />
           <span className="uppercase tracking-wider font-bold">
             Tear a Tab to Connect
           </span>
           <Scissors className="w-4 p-0 -translate-px" />
         </div>
-        <div className="relative grid lg:grid-cols-11 xl:grid-cols-12 lg md:grid-cols-8 gap-y-4 h-[265]  overflow-clip">
+        <div
+          className="relative grid lg:grid-cols-11 xl:grid-cols-12 lg md:grid-cols-8 gap-y-4 h-[265]"
+          style={{ clipPath: "inset(-200px 0 0 0)" }}
+        >
           {items.map((item, index) => {
             if (!item.isStatic) {
               return (
