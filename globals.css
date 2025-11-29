@@ -10,6 +10,10 @@
   --color-secondary: #d8d8d8;
 }
 
+@utility bg-paper {
+  background-image: url("/paper_fibers.png");
+}
+
 body {
   font-family: var(--font-sans);
   background-color: #e8e8e8;

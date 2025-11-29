@@ -31,10 +31,11 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
       isPeelOpenedRef.current = true;
 
       p.removeEvents?.();
-
-      if (peelWrapperRef.current?.el) {
-        peelWrapperRef.current.el.style.transition = "opacity 0.2s ease";
-        peelWrapperRef.current.el.style.opacity = "0";
+      const el = peelWrapperRef.current.el as HTMLDivElement;
+      if (el) {
+        el.style.transition = "opacity 0.2s ease";
+        el.style.opacity = "0";
+        el.style.cursor = "pointer";
       }
 
       setIsOpened(true);
@@ -61,7 +62,10 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
         handleDrag={handlePeelDrag}
         drag
       >
-        <PeelTop className="shadow-lg p-3 pt-4 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply">
+        <PeelTop
+          className="shadow-lg p-3 pt-4 bg-red-100 bg-paper bg-blend-multiply 
+          hover:cursor-grab"
+        >
           <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
             <span>Also</span>
             <span>Find me</span>
@@ -70,14 +74,17 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
           <div
             className={`flex flex-col items-center justify-end gap-12
               text-gray-700
-              w-full h-40
+              w-full h-40 
               `}
           >
             <div className="text-lg font-bold -rotate-90">{handle}</div>
             <div className="text-gray-700">{icon}</div>
           </div>
         </PeelTop>
-        <PeelBack ref={backPeelRef} className={cn("relative bg-pink-100")} />
+        <PeelBack
+          ref={backPeelRef}
+          className={cn("relative bg-pink-100 hover:cursor-grab")}
+        />
       </PeelWrapper>
       {isOpened ? <SmallStaticPeel /> : null}
     </>

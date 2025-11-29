@@ -57,7 +57,7 @@ export default function About() {
         </div>
       </div>
       <div className="relative col-span-full h-fit">
-        <div className="flex justify-center items-center gap-4 h-12 border-b-2 border-dashed border-gray-400 bg-red-100 bg-[url(/paper_fibers.png)] bg-blend-multiply">
+        <div className="flex justify-center items-center gap-4 h-12 border-b-2 border-dashed border-gray-400 bg-red-100 bg-paper bg-blend-multiply">
           <Scissors className="w-4 p-0 -translate-y-px " />
           <span className="uppercase tracking-wider font-bold">
             Tear a Tab to Connect

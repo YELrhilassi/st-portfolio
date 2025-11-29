@@ -7,9 +7,7 @@ export default function AboutFigure() {
         src="/about-profile.png"
         alt="profile ilustraion"
         quality={100}
-        style={{
-          objectFit: "cover",
-        }}
+        style={{ objectFit: "cover" }}
         fill
       />
     </figure>
