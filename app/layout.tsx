@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Varta, Instrument_Serif, EB_Garamond } from "next/font/google";
 import "@/globals.css";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const varta = Varta({
   subsets: ["latin"],
@@ -37,10 +38,17 @@ export default async function RootLayout({
       lang="en"
       className={`${varta.variable} ${instrument.variable} ${ui.variable} antialiased`}
     >
-      <body className="text-primary max-w-7xl mx-auto">
+      <head>
+        <meta
+          name="viewport"
+          content="width=1400, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </head>
+
+      <body className="text-primary max-w-7xl mx-auto h-full w-[1420px]">
         <Header className="mt-8 " />
-        <main className="relative mt-6">{children}</main>
-        <div className="relative h-40"></div>
+        <main className="relative mt-6 h-full mb-40">{children}</main>
+        <Footer />
       </body>
     </html>
   );

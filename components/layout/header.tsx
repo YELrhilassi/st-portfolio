@@ -13,7 +13,7 @@ export default function Header({ className: clx }: THeader) {
     >
       <div className="flex items-center py-2 px-4 font-ui font-medium text-xl">
         <ul className="flex-1 flex flex-col gap-1">
-          <a>About</a>
+          <Link href="/about">About</Link>
           <a>Artwork</a>
         </ul>
         <div className="flex-2 flex justify-around border-x">
