@@ -66,7 +66,7 @@ export default function About() {
         </div>
         <div
           className="relative grid lg:grid-cols-11 xl:grid-cols-12 lg md:grid-cols-8 gap-y-4 h-[265]"
-          style={{ clipPath: "inset(-200px 0 0 0)" }}
+          style={{ clipPath: "inset(-200px 0 0 -200px)" }}
         >
           {items.map((item, index) => {
             if (!item.isStatic) {

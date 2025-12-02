@@ -1,5 +1,7 @@
 export default function () {
   return (
-    <h1 className="flex justify-center items-center h-screen">404 Not found</h1>
+    <div className="h-screen w-full p-[15%]">
+      <h1 className=" mx-auto text-4xl w-fit ">404 Not found</h1>
+    </div>
   );
 }

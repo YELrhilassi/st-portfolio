@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className=" border-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground font-light">
             © 2025 Sophia Tam. All rights reserved.
           </p>
