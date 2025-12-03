@@ -44,7 +44,7 @@ export default async function Hero({ searchParams }: { searchParams: any }) {
         </ImageGrid>
       </div>
       <div>
-        <div className="text-lg pt-6">
+        <div className="text-lg pt-6 leading-6">
           Thomas Pink is a luxury shirt retailer with global name recognition.
           The objective for this project is to design compelling assets,
           including hero images, cover pictures, infographics with stats and
