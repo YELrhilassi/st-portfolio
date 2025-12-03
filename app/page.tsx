@@ -1,6 +1,7 @@
 import GridWrapper from "@/components/layout/grid-wrapper";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
   return (
@@ -19,18 +20,18 @@ export default async function Home() {
           <div className="flex flex-col gap-3">
             <h2 className="text-3xl uppercase">the Illustrator corner</h2>
             <span className="font-bold text-gray-500 tracking-wider uppercase">
-              LOrem ipsm
+              paintings | commissions
             </span>
           </div>
           <div className="pt-4">
-            <p className="max-h-64 overflow-hidden text-ellipsis line-clamp-10">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              ultricies sit amet elit a molestie. Fusce eget nulla id libero
-              imperdiet vehicula quis sit amet ipsum. Donec ut mattis metus. Sed
-              ultricies porttitor hendrerit. Aliquam vel sem rhoncus, congue
-              sapien eget, tempor eros. Vestibulum et vulputate risus. Morbi
-              porttitor justo aliquam elit interdum bibendum quis id ante.
-              Suspendisse eu scelerisque eros, ac congue leo
+            <p className="max-h-64 overflow-hidden text-lg text-ellipsis line-clamp-9">
+              In October 2025, I am commissioned to be the Event Illustrator of
+              the social cake event hosted by the Josh & Cynthia, aka the
+              Vancouver Cookbook Club.  This on-site commission was an exciting
+              learning experience where I practiced simultaneously managing my
+              time and engaging with event attendees. I am asked to deliver one
+              painting that captures the cakes, plus four personalized painting
+              postcards as
             </p>
             <div className="group flex gap-4 font-bold mt-3 w-fit hover:cursor-pointer">
               <span className="capitalize">continue reading</span>
@@ -43,13 +44,15 @@ export default async function Home() {
         <div className="col-span-5">
           <figure className="w-full h-full">
             <div className="relative w-[534] h-[551]">
-              <Image
-                className=" h-full w-full object-cover"
-                src="/home/pink.png"
-                alt="thomas-pink"
-                width={534}
-                height={551}
-              />
+              <Link href="/project/thomas-pink">
+                <Image
+                  className=" h-full w-full object-cover"
+                  src="/home/pink.png"
+                  alt="thomas-pink"
+                  width={534}
+                  height={551}
+                />
+              </Link>
             </div>
             <figcaption className="pt-4 w-full">
               <h2 className="flex justify-between uppercase ">
@@ -93,7 +96,7 @@ export default async function Home() {
                     the edge newsletter
                   </span>
                   <span className="max-w-[80%] font-sans font-bold text-gray-500 leading-5 tracking-wider uppercase">
-                    AI, Data, and the Future of Customer Experience
+                    AI | Data | and the Future of Customer Experience
                   </span>
                 </h2>
               </figcaption>
