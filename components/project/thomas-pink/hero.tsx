@@ -2,13 +2,13 @@ import {
   ImageGrid,
   ImagePreview,
   ImageThumbnail,
-} from "@/components/project/image-grid";
+} from "./image-grid";
 
 //
 //
 //
 
-export default async function Hero({ searchParams }: { searchParams: any }) {
+export async function Hero({ searchParams }: { searchParams: any }) {
   const previewSrc = searchParams.preview || "/thomas-pink/image1.png";
 
   // All images
@@ -23,7 +23,7 @@ export default async function Hero({ searchParams }: { searchParams: any }) {
   const thumbnails = images.filter((src) => src !== previewSrc);
 
   return (
-    <div className="grid grid-cols-3 grid-rows-2 mt-20">
+    <div className="grid grid-cols-3 grid-rows-3 mt-20">
       <div className="col-start-1 row-span-1 flex flex-col divide-y-2">
         <h1 className="text-8xl pb-15! uppercase">thomas pink</h1>
         <div className="flex gap-4 divide-x-2 mt-8">
@@ -44,7 +44,7 @@ export default async function Hero({ searchParams }: { searchParams: any }) {
         </ImageGrid>
       </div>
       <div>
-        <div className="text-lg pt-6 leading-6">
+        <p className="text-lg pt-6 leading-6">
           Thomas Pink is a luxury shirt retailer with global name recognition.
           The objective for this project is to design compelling assets,
           including hero images, cover pictures, infographics with stats and
@@ -54,7 +54,7 @@ export default async function Hero({ searchParams }: { searchParams: any }) {
           of the first few published case studies, fortunately this piece has
           successfully stood out and being taken as design inspiration for the
           other case studies that follow later.
-        </div>
+        </p>
       </div>
     </div>
   );

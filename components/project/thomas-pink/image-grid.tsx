@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { childrenWraper } from "../utils";
+import { childrenWraper } from "@/components/utils";
 import Link from "next/link";
 
 export function ImageGrid({ children }: { children: React.ReactNode }) {
