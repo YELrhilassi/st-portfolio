@@ -8,12 +8,12 @@ export function ImageGrid({ children }: { children: React.ReactNode }) {
   const thumbnails = elements.getComponentsByType(ImageThumbnail);
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-x-4 gap-y-8 h-full w-full overflow-hidden">
-      <div className="relative col-span-full row-span-2 overflow-hidden">
+    <div className="grid grid-cols-3 grid-rows-[repeat(2,auto)] gap-8 w-full">
+      <div className="relative col-span-full h-[437]">
         {preview}
       </div>
       {thumbnails.map((thumbnail, i) => (
-        <div key={i} className="relative">
+        <div key={i} className="relative  h-[172]">
           {thumbnail}
         </div>
       ))}
@@ -35,14 +35,12 @@ export function ImagePreview({ src }: { src: string }) {
 }
 export function ImageThumbnail({ src }: { src: string }) {
   return (
-    <Link href={`?preview=${encodeURIComponent(src)}`} scroll={false} replace>
+    <Link href={`?preview=${encodeURIComponent(src)}`} scroll={false} replace className="">
       <Image
         src={src}
         alt=""
         fill
-        style={{
-          objectFit: "cover",
-        }}
+        className="object-cover" 
       />
     </Link>
   );

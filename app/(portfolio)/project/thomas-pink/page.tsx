@@ -1,9 +1,5 @@
 import { Hero, Process } from "@/components/project/thomas-pink";
 
-//
-//
-//
-
 export default async function ThomasPink({
   searchParams,
 }: {

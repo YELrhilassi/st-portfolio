@@ -4,9 +4,6 @@ import {
   ImageThumbnail,
 } from "./image-grid";
 
-//
-//
-//
 
 export async function Hero({ searchParams }: { searchParams: any }) {
   const previewSrc = searchParams.preview || "/thomas-pink/image1.png";
@@ -23,7 +20,7 @@ export async function Hero({ searchParams }: { searchParams: any }) {
   const thumbnails = images.filter((src) => src !== previewSrc);
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 mt-20">
+    <div className="grid grid-cols-3 grid-rows-[repeat(2,auto)] mt-20">
       <div className="col-start-1 row-span-1 flex flex-col divide-y-2">
         <h1 className="text-8xl pb-15! uppercase">thomas pink</h1>
         <div className="flex gap-4 divide-x-2 mt-8">
