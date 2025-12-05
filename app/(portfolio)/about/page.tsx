@@ -47,7 +47,7 @@ export default function About() {
           <div className="w-[300] h-[440]">
             <AboutFigure />
           </div>
-          <div className="flex flex-col gap-4 w-[33%] h-fit mt-18 ">
+          <div id="about" className="flex flex-col gap-4 w-[33%] h-fit mt-18 ">
             <AboutBio />
           </div>
 
@@ -56,7 +56,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="relative col-span-full h-fit">
+      <div id="connect" className="relative col-span-full h-fit">
         <div className="flex justify-center items-center gap-4 h-12 border-b-2 border-dashed border-gray-400 bg-red-100 bg-paper bg-blend-multiply">
           <Scissors className="w-4 p-0 -translate-y-px " />
           <span className="uppercase tracking-wider font-bold">

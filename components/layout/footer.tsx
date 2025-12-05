@@ -3,23 +3,37 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t font-sans font-light">
-      <div className="py-12">
-       <div>yee</div>
+      <div className="py-8">
+        <ul className="flex gap-8">
+          <li className="capitalize texl-lg">
+            {" "}
+            <Link href="/">home</Link>
+          </li>
+          <li className="capitalize texl-lg">
+            <Link href="/about#about">about</Link>
+          </li>
+          <li className="capitalize texl-lg">
+            <Link href="/artwork">artwork</Link>
+          </li>
+          <li className="capitalize texl-lg">
+            <Link href="/about#connect">Connect</Link>
+          </li>
+        </ul>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex justify-between items-center">
+        <div className="pt-5 flex justify-between items-center">
           <p className="text-sm text-muted-foreground">
             © 2025 Sophia Tam. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm">
             <Link
-              href="#"
+              href="/privacy"
               className="text-muted-foreground hover:text-foreground transition-colors font-light"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-muted-foreground hover:text-foreground transition-colors font-light"
             >
               Terms of Service
