@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local"
 import { Varta, Instrument_Serif, EB_Garamond } from "next/font/google";
 import "@/globals.css";
 import Header from "@/components/layout/header";
@@ -9,12 +10,13 @@ const varta = Varta({
   variable: "--font-varta",
 });
 
-const instrument = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument",
-});
+const instrument = localFont({
+  src:[
+    {path:'./font/instrument/regular.ttf', weight:"400"}
+  ],
+  variable:'--font-instrument'
+})
+
 
 const ui = EB_Garamond({
   subsets: ["latin"],
