@@ -7,6 +7,7 @@ export default async function Home() {
   return (
     <GridWrapper className="grid-cols-12 h-full gap-4 mt-15">
       <div className="col-span-3 pt-4 border-t">
+        <Link href='/artwork/the-illustrator-corner'>
         <div className="relative w-full h-[256]">
           <Image
             className="w-full object-cover"
@@ -14,7 +15,7 @@ export default async function Home() {
             alt="illustartor corner"
             height={256}
             width={308}
-          />
+            />
         </div>
         <div className="pt-4">
           <div className="flex flex-col gap-3">
@@ -39,6 +40,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
+            </Link>
       </div>
       <div className="col-start-4 col-span-9 grid grid-cols-subgrid gap-10 pt-4 border-t">
         <div className="col-span-5">
