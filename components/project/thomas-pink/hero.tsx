@@ -1,8 +1,8 @@
 import {
-  ImageGrid,
+
   ImagePreview,
   ImageThumbnail,
-} from "./image-grid";
+} from "@/components/ui";
 
 
 export async function Hero({ searchParams }: { searchParams: any }) {
@@ -23,7 +23,7 @@ export async function Hero({ searchParams }: { searchParams: any }) {
     <div className="grid grid-cols-3 grid-rows-[repeat(2,auto)] mt-20">
       <div className="col-start-1 row-span-1 flex flex-col divide-y-2">
         <h1 className="text-8xl pb-15! uppercase">thomas pink</h1>
-        <div className="grid grid-cols-[repeat(2,auto)] gap-4 w-full divide-x-2 mt-8">
+        <div className="flex gap-4 divide-x-2 mt-8">
           <span className=" pr-4 font-bold text-md tracking-wider uppercase">
             case study
           </span>
@@ -33,12 +33,12 @@ export async function Hero({ searchParams }: { searchParams: any }) {
         </div>
       </div>
       <div className="col-start-2 col-span-2 row-span-full pl-20">
-        <ImageGrid>
+        {/* TODO: fix it base on the report page */}
           <ImagePreview src={previewSrc} />
           {thumbnails.map((src) => (
             <ImageThumbnail key={src} src={src} />
           ))}{" "}
-        </ImageGrid>
+      
       </div>
       <div>
         <p className="text-lg pt-6 leading-6">

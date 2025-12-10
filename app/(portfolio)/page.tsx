@@ -92,7 +92,7 @@ export default async function Home() {
           </Link>
 
           <div className=" w-full h-full pt-4">
-            <Link href="#">
+            <Link href="/project/personalization-report">
               <figure className="h-full flex flex-col justify-around">
                 <figcaption className="h-fit flex items-start gap-5">
                   <span className="text-7xl leading-16 font-serif">03</span>

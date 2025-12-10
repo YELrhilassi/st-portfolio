@@ -30,6 +30,7 @@ export const metadata: Metadata = {
   description: "Welcome to my portfolio",
 };
 
+const now = new Date();
 export default async function RootLayout({
   children,
 }: {
@@ -48,7 +49,7 @@ export default async function RootLayout({
       </head>
 
       <body className="text-primary max-w-7xl mx-auto h-full w-[1420px]">
-        <Header className="mt-8 min-h-20" />
+        <Header date={now} className="mt-8 min-h-20" />
         <main className="relative mt-6 h-full mb-40">{children}</main>
         <Footer />
       </body>

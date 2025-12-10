@@ -1,7 +1,7 @@
 import { Hero, FindingTheEdge } from "@/components/project/the-edge";
 import Image from "next/image";
 
-export default async function ThomasPink({
+export default async function TheEdge({
   searchParams,
 }: {
   searchParams: any;

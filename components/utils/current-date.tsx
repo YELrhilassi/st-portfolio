@@ -1,22 +1,22 @@
+
 type TCurrentDate = {
   className?: React.ComponentProps<"div">["className"];
-  date?: Date | string;
-};
 
-const dateFormatter = new Intl.DateTimeFormat("en-GB", {
+};
+const NOW = new Date();
+const FORMATTED = NOW.toLocaleDateString("en-GB", {
   weekday: "long",
   day: "2-digit",
   month: "long",
   year: "numeric",
 });
+const ISO = NOW.toISOString();
 
-export default function CurrentDate({ date, className }: TCurrentDate) {
-  const _date = new Date();
-  const formated = dateFormatter.format(_date);
 
+export default function CurrentDate({ className }: TCurrentDate) {
   return (
-    <time dateTime={_date.toISOString()} className={className}>
-      {formated}
+    <time dateTime={ISO} className={className}>
+      {FORMATTED}
     </time>
   );
 }
