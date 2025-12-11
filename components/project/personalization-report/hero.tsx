@@ -1,4 +1,4 @@
-import { ImagePreview, ImageThumbnail } from "@/components/ui";
+import { ImagePreview, ImageThumbnail, PeelButton } from "@/components/ui";
 import { SquareArrowOutDownRight, SquareArrowOutUpRight } from "lucide-react";
 
 export async function Hero({ searchParams }: { searchParams: any }) {
@@ -14,30 +14,30 @@ export async function Hero({ searchParams }: { searchParams: any }) {
   const thumbnails = images.filter((src) => src !== previewSrc);
 
   return (
-    <div className="grid grid-cols-4 grid-rows-[repeat(2,auto)] mt-20">
-      <div className="col-start-1 col-span-2 row-span-1 flex flex-col w-full">
-        <div className=" w-full space-y-2">
+    <div className="grid grid-cols-5 grid-rows-[repeat(2,auto)] mt-20">
+      <div className=" grid grid-cols-subgrid col-span-full row-start-1  w-full ">
+        <div className="col-span-full w-full space-y-2">
           <h1 className="text-[90px] uppercase leading-24">
             Personalization Report 2025:
           </h1>
-          <div className="border-b pb-20 max-w-[70%]">
-            <h2 className="text-4xl uppercase italic  ">
-              AI, Data, and the Future of Customer Experience
-            </h2>
-          </div>
+        </div>
+        <div className="col-span-2 border-b pb-20 w-4/5">
+          <h2 className="text-4xl uppercase italic  ">
+            AI, Data, and the Future of Customer Experience
+          </h2>
         </div>
 
-        <div className="flex gap-4 divide-x mt-8">
+        <div className="row-start-3 col-span-2 flex gap-4 divide-x mt-8">
           <span className=" pr-4 font-bold text-md tracking-wider uppercase">
             Report
           </span>
           <span className=" pr-4 font-bold text-md tracking-wider uppercase">
-            thought leadershipcase study
+            thought leadership
           </span>
         </div>
       </div>
-      <div className="col-start-3 col-span-2 row-span-full h-full">
-        <div className="grid grid-cols-3 gap-6 w-full pt-5">
+      <div className="col-start-3 col-span-4 row-span-full h-full ">
+        <div className="grid gap-6 w-full pt-32">
           <div className="relative col-span-full">
             <ImagePreview
               src={previewSrc}
@@ -46,16 +46,17 @@ export async function Hero({ searchParams }: { searchParams: any }) {
               className="object-cover w-full"
             />
           </div>
-          {thumbnails.map((thumbnail, i) => (
-            <div key={i} className="relative w-full">
-              <ImageThumbnail
-                src={thumbnail}
-                width={185}
-                height={102}
-                className="object-cover w-full"
-              />
-            </div>
-          ))}
+          <div className="flex col-span-full justify-between gap-4 ">
+            {thumbnails.map((thumbnail, i) => (
+              <div key={i} className="relative w-[33%] h-[15vh]">
+                <ImageThumbnail
+                  src={thumbnail}
+                  fill
+                  className="object-center w-full"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="col-start-1 col-span-2 pr-20 pt-5">
@@ -72,12 +73,22 @@ export async function Hero({ searchParams }: { searchParams: any }) {
           and studying deeper about data design, introducing the apply digital
           brand to a new elements.
         </p>
-        <button className="flex items-center justify-between gap-2 capitalize border py-3 px-10">
-          <span className="leading-0 pt-0.5">full report</span>
-          <span className="w-4 h-4">
-            <SquareArrowOutUpRight className="w-full h-full p-0 m-0" />
-          </span>
-        </button>
+        <PeelButton
+          href="http://x.com"
+          className="w-[200] h-[50] hover:cursor-pointer mt-10"
+        >
+          <div
+            className="flex items-center justify-center gap-3 h-full w-full
+          capitalize underline font-bold
+          bg-gray-400/70 mask-[url(/ui/bg-clip1.svg)] mask-no-repeat mask-cover
+          "
+          >
+            <span>full report</span>
+            <span className="w-4 h-4">
+              <SquareArrowOutUpRight className="w-full h-full p-0 m-0" />
+            </span>
+          </div>
+        </PeelButton>
       </div>
     </div>
   );
