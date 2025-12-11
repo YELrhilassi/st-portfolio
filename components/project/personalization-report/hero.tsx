@@ -1,5 +1,5 @@
 import { ImagePreview, ImageThumbnail, PeelButton } from "@/components/ui";
-import { SquareArrowOutDownRight, SquareArrowOutUpRight } from "lucide-react";
+import {  SquareArrowOutUpRight } from "lucide-react";
 
 export async function Hero({ searchParams }: { searchParams: any }) {
   const previewSrc = searchParams.preview || "/report/image1.png";

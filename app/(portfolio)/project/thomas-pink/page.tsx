@@ -10,6 +10,7 @@ export default async function ThomasPink({
   return (
     <div className="">
       <Hero searchParams={search} />
+      
       <Process />
     </div>
   );

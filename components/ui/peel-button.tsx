@@ -61,7 +61,7 @@ export function PeelButton({
       peel.t = 0;
 
       animRef.current = gsap.to(peel, {
-        duration: 1.2,
+        duration: 1,
         t: 1,
         paused: true,
         ease: "power2.out",
@@ -70,10 +70,10 @@ export function PeelButton({
         },
         onComplete() {
           navigate();
+          animRef.current.reverse();
         },
       });
     }
-
     const tween = animRef.current;
 
     if (peel.t > 0.5) {
@@ -115,7 +115,7 @@ export function PeelButton({
     >
       <PeelWrapper
         ref={peelRef}
-        drag
+        // drag is working but you still need to improve it
         handleDrag={handlePeelDrag}
         handlePress={() => {
           // Only animate if it wasn't a drag
