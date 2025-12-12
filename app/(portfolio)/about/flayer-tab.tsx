@@ -63,8 +63,7 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
         drag
       >
         <PeelTop
-          className="shadow-lg p-3 pt-4 bg-red-100 bg-paper bg-blend-multiply 
-          hover:cursor-grab"
+          className="shadow-lg p-3 pt-4 bg-red-100 bg-paper bg-blend-multiply hover:cursor-grab"
         >
           <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
             <span>Also</span>
@@ -72,10 +71,7 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
             <span>At:</span>
           </p>
           <div
-            className={`flex flex-col items-center justify-end gap-12
-              text-gray-700
-              w-full h-40 
-              `}
+            className={`flex flex-col items-center justify-end gap-12 text-gray-700 w-full h-40 `}
           >
             <div className="text-lg font-bold -rotate-90">{handle}</div>
             <div className="text-gray-700">{icon}</div>

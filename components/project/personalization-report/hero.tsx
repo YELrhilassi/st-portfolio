@@ -43,6 +43,7 @@ export async function Hero({ searchParams }: { searchParams: any }) {
               src={previewSrc}
               width={608}
               height={350}
+              quality={100}
               className="object-cover w-full"
             />
           </div>
