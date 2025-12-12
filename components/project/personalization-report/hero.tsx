@@ -75,7 +75,7 @@ export async function Hero({ searchParams }: { searchParams: any }) {
           brand to a new elements.
         </p>
         <PeelButton
-          href="http://x.com"
+          href="https://a.storyblok.com/f/234030/x/2deed52a84/2025-leadership-priorities-in-personalization.pdf"
           className="w-[200] h-[50] hover:cursor-pointer mt-10"
         >
           <div

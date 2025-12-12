@@ -49,26 +49,48 @@ export default function IllustratorCorner() {
           </div>
         </div>
         <aside className="-col-start-1 -col-end-2 row-start-1 row-span-4 flex flex-col gap-2 items-center p-8 w-full bg-gray-500/20">
-          <span className="uppercase font-semibold text-[16px] tracking-wider">other artwork</span>
+          <span className="uppercase font-semibold text-[16px] tracking-wider">
+            other artwork
+          </span>
           <div className=" h-full w-full grid gap-8">
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork3-3.png" alt="Painting postcard thumbnail" fill className="object-cover" />
+              <Image
+                src="/artwork/artwork2-1.png"
+                alt="Portrait illustration thumbnail"
+                fill
+                className="object-cover"
+              />
             </Link>
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork2-1.png" alt="Portrait illustration thumbnail" fill className="object-cover" />
+              <Image
+                src="/artwork/artwork3-1.png"
+                alt="Colorful abstract portrait thumbnail"
+                fill
+                className="object-cover"
+              />
             </Link>
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork3-1.png" alt="Colorful abstract portrait thumbnail" fill className="object-cover" />
+              <Image
+                src="/artwork/artwork1.png"
+                alt="Illustration collage thumbnail"
+                fill
+                className="object-cover"
+              />
             </Link>
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork1.png" alt="Illustration collage thumbnail" fill className="object-cover" />
+              <Image
+                src="/artwork/artwork3-3.png"
+                alt="Painting postcard thumbnail"
+                fill
+                className="object-cover"
+              />
             </Link>
           </div>
           <div className="flex items-center justify-end w-full pt-4 mt-4 border-t ">
-            <Link href="/artwork" >
-            <MoveRight   className="w-20 h-10 p-0 m-0 "/>
+            <Link href="/artwork">
+              <MoveRight className="w-20 h-10 p-0 m-0 " />
             </Link>
-            </div>
+          </div>
         </aside>
         <div className=" col-span-3 grid grid-cols-2 gap-8">
           <figure className="relative col-span-full h-full">
@@ -91,7 +113,12 @@ export default function IllustratorCorner() {
               />
               <figcaption className="space-x-1 mt-1 text-sm">
                 <span>Picture captured by</span>
-                <Link href="" className="underline">
+                <Link
+                  className="underline"
+                  href="https://www.joshandcynthia.ca/event-gallery/october---cake-garden-2.0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Vancouver Cookbook Club
                 </Link>
               </figcaption>
@@ -112,10 +139,17 @@ export default function IllustratorCorner() {
               also became a natural ice breaker to start interacting with the
               attendees, exchanging creative ideas on cakes and artwork. I was
               also very honoured to paint for the event's special guest:{" "}
-              <b>Tessa Huff, </b>a social media personality who specializes in
-              baking. The commission was a resounding success that allowed me to
-              merge my artistic skills with invaluable networking, making it a
-              truly rewarding debut.
+              <Link
+                href="https://www.instagram.com/tessahuffbooks/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>Tessa Huff, </b>
+              </Link>{" "}
+              a social media personality who specializes in baking. The
+              commission was a resounding success that allowed me to merge my
+              artistic skills with invaluable networking, making it a truly
+              rewarding debut.
             </p>
             <figure>
               <div className="grid grid-cols-3 gap-2.5">
@@ -154,7 +188,12 @@ export default function IllustratorCorner() {
               </div>
               <figcaption className="space-x-1 mt-1 text-sm">
                 <span>Photo gallery of</span>
-                <Link href="" className="underline">
+                <Link
+                  className="underline"
+                  href="https://www.instagram.com/tessahuffbooks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Tessa Huff,
                 </Link>
                 <span>

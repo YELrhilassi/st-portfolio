@@ -27,7 +27,7 @@ type WrappedChildren = React.ReactNode[] & {
   withReplaceAll: (name: string, newEl: FCElement) => WrappedChildren;
   withReplaceBy: (
     predicate: (el: FCElement) => boolean,
-    newEl: FCElement,
+    newEl: FCElement
   ) => WrappedChildren;
 };
 
@@ -54,9 +54,8 @@ function elementMatchesNameOrType(el: any, nameOrType: string | any): boolean {
     const wanted = nameOrType.toLowerCase();
 
     // 1) explicit slot/data-slot prop wins (recommended)
-    const slot = (el.props && (el.props.slot ?? el.props["data-slot"])) as
-      | string
-      | undefined;
+    // @ts-ignore
+    const slot = (el.props && (el.props?.["slot"] ?? el.props?.["data-slot"])) as any ;
     if (slot && slot.toLowerCase() === wanted) return true;
 
     // 2) component type name/displayName or intrinsic tag
@@ -84,14 +83,14 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
         if (prop === "getComponent") {
           return (name: string) =>
             target.find((el) =>
-              elementMatchesNameOrType(el, name),
+              elementMatchesNameOrType(el, name)
             ) as FCElement;
         }
 
         if (prop === "getComponents") {
           return (name: string) =>
             target.filter((el) =>
-              elementMatchesNameOrType(el, name),
+              elementMatchesNameOrType(el, name)
             ) as FCElement[];
         }
 
@@ -103,7 +102,7 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
         if (prop === "getComponentsByType") {
           return (type: any) =>
             target.filter(
-              (el) => isElement(el) && el.type === type,
+              (el) => isElement(el) && el.type === type
             ) as FCElement[];
         }
 
@@ -146,7 +145,7 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
             const out: Record<string, FCElement | undefined> = {};
             names.forEach((name) => {
               out[name] = target.find((el) =>
-                elementMatchesNameOrType(el, name),
+                elementMatchesNameOrType(el, name)
               ) as FCElement | undefined;
             });
             return out as Record<T, FCElement | undefined>;
@@ -157,7 +156,7 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
         if (prop === "replace") {
           return (name: string, newEl: FCElement) => {
             const idx = target.findIndex((el) =>
-              elementMatchesNameOrType(el, name),
+              elementMatchesNameOrType(el, name)
             );
             if (idx >= 0) target[idx] = newEl;
           };
@@ -174,6 +173,7 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
         if (prop === "replaceBy") {
           return (pred: (el: FCElement) => boolean, newEl: FCElement) => {
             for (let i = 0; i < target.length; i++) {
+              // @ts-ignore
               if (isElement(target[i]) && pred(target[i])) target[i] = newEl;
             }
           };
@@ -184,8 +184,8 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
           return (name: string, newEl: FCElement) =>
             wrap(
               target.map((el) =>
-                elementMatchesNameOrType(el, name) ? newEl : el,
-              ),
+                elementMatchesNameOrType(el, name) ? newEl : el
+              )
             );
         }
 
@@ -193,8 +193,8 @@ export function childrenWraper(children: React.ReactNode): WrappedChildren {
           return (name: string, newEl: FCElement) =>
             wrap(
               target.map((el) =>
-                elementMatchesNameOrType(el, name) ? newEl : el,
-              ),
+                elementMatchesNameOrType(el, name) ? newEl : el
+              )
             );
         }
 
