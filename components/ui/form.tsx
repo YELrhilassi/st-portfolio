@@ -21,7 +21,7 @@ type TBaseInput = React.ComponentProps<"input"> & {
   name: string;
 };
 // ======
-type TButton = {
+type TButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
 };
 
@@ -93,11 +93,13 @@ Form.Input = ({ type = "text", name, ...rest }: TInput) => {
   );
 };
 
-Form.Button = ({ children }: TButton) => {
+Form.Button = ({ children, type = "submit", disabled, ...rest }: TButton) => {
   return (
     <button
-      type="submit"
-      className=" group flex justify-center gap-3 px-4 pt-1 text-lg font-bold tracking-wider uppercase border hover:cursor-pointer"
+      type={type}
+      disabled={disabled}
+      className="group flex justify-center gap-3 px-4 pt-1 text-lg font-bold tracking-wider uppercase border hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-70 disabled:translate-y-px"
+      {...rest}
     >
       {children}
       <Send className="translate-y-1 h-4 w-4 p-0 transition-transform group-hover:translate-x-1" />
