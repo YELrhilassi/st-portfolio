@@ -34,50 +34,50 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   return (
-    <GridWrapper className="grid-cols-12 h-full gap-4 mt-15">
-      <div className="col-span-3 pt-4 border-t">
-        <Link href='/artwork/the-illustrator-corner'>
-        <div className="relative w-full h-[256]">
-          <Image
-            className="w-full object-cover"
-            src="/home/illustrator-corner.png"
-            alt="Artwork feature for The Illustrator Corner commission"
-            height={256}
-            width={308}
+    <GridWrapper className="home-gallery grid-cols-12 h-full gap-4 mt-15">
+      <div className="article-card col-span-3 pt-4 border-t">
+        <Link className="block h-full" href="/artwork/the-illustrator-corner">
+          <div className="relative w-full h-[256] overflow-hidden">
+            <Image
+              className="toggle-image w-full object-cover scale-150"
+              src="/home/illustrator-corner.png"
+              alt="Artwork feature for The Illustrator Corner commission"
+             
+              fill
             />
-        </div>
-        <div className="pt-4">
-          <div className="flex flex-col gap-3">
-            <h2 className="text-3xl uppercase">the Illustrator corner</h2>
-            <span className="font-bold text-gray-500 tracking-wider uppercase">
-              paintings | commissions
-            </span>
           </div>
           <div className="pt-4">
-            <p className="max-h-64 overflow-hidden text-lg text-ellipsis line-clamp-9">
-              In October 2025, I am commissioned to be the Event Illustrator of
-              the social cake event hosted by the Josh & Cynthia, aka the
-              Vancouver Cookbook Club. This on-site commission was an exciting
-              learning experience where I practiced simultaneously managing my
-              time and engaging with event attendees. I am asked to deliver one
-              painting that captures the cakes, plus four personalized painting
-              postcards as
-            </p>
-            <div className="group flex gap-4 font-bold mt-3 w-fit hover:cursor-pointer">
-              <span className="capitalize">continue reading</span>
-              <ArrowRight className="w-5  group-hover:translate-x-2 transition-all ease-in-out" />
+            <div className="flex flex-col gap-3">
+              <h2 className="text-3xl uppercase">the Illustrator corner</h2>
+              <span className="font-bold text-gray-500 tracking-wider uppercase">
+                paintings | commissions
+              </span>
+            </div>
+            <div className="pt-4">
+              <p className="max-h-64 overflow-hidden text-lg text-ellipsis line-clamp-9">
+                In October 2025, I am commissioned to be the Event Illustrator of
+                the social cake event hosted by the Josh & Cynthia, aka the
+                Vancouver Cookbook Club. This on-site commission was an exciting
+                learning experience where I practiced simultaneously managing my
+                time and engaging with event attendees. I am asked to deliver one
+                painting that captures the cakes, plus four personalized painting
+                postcards as
+              </p>
+              <div className="group flex gap-4 font-bold mt-3 w-fit hover:cursor-pointer">
+                <span className="capitalize">continue reading</span>
+                <ArrowRight className="w-5  group-hover:translate-x-2 transition-all ease-in-out" />
+              </div>
             </div>
           </div>
-        </div>
-            </Link>
+        </Link>
       </div>
       <div className="col-start-4 col-span-9 grid grid-cols-subgrid gap-10 pt-4 border-t">
-        <div className="col-span-5">
+        <div className="article-card col-span-5">
           <Link href="/project/thomas-pink">
             <figure className="w-full h-full">
               <div className="relative w-[534] h-[551]">
                 <Image
-                  className=" h-full w-full object-cover"
+                  className="toggle-image default-color h-full w-full object-cover"
                   src="/home/pink.png"
                   alt="Thomas Pink case study cover art"
                   width={534}
@@ -96,10 +96,11 @@ export default async function Home() {
           </Link>
         </div>
         <div className="col-span-4 relative flex flex-col w-full divide-y">
-          <Link href="/project/the-edge">
+          <Link className="article-card block" href="/project/the-edge">
             <figure className="flex flex-row-reverse justify-between w-full pb-4">
               <div className="h-full w-[196]">
                 <Image
+                  className="toggle-image"
                   src="/home/the-edge.png"
                   alt="The Edge newsletter design preview"
                   width={196}
@@ -120,8 +121,8 @@ export default async function Home() {
             </figure>
           </Link>
 
-          <div className=" w-full h-full pt-4">
-            <Link href="/project/personalization-report">
+          <div className="article-card w-full h-full pt-4">
+            <Link className="block h-full" href="/project/personalization-report">
               <figure className="h-full flex flex-col justify-around">
                 <figcaption className="h-fit flex items-start gap-5">
                   <span className="text-7xl leading-16 font-serif">03</span>
@@ -136,6 +137,7 @@ export default async function Home() {
                 </figcaption>
                 <div className="w-full">
                   <Image
+                    className="toggle-image"
                     src="/home/report.png"
                     alt="Personalization report data visualization spread"
                     width={420}

@@ -32,4 +32,24 @@ h6 {
   padding: 0;
 }
 
+.home-gallery .toggle-image {
+  filter: grayscale(100%);
+  transition: filter 200ms ease;
+}
+
+.home-gallery .default-color {
+  filter: none;
+}
+
+.home-gallery:has(.article-card:hover) .toggle-image {
+  filter: grayscale(100%);
+}
+
+.home-gallery:has(.article-card:hover) .article-card:hover .toggle-image {
+  filter: none;
+}
+
+.home-gallery:not(:has(.article-card:hover)) .default-color {
+  filter: none;
+}
 
