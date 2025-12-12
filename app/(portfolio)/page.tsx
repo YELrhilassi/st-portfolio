@@ -1,7 +1,36 @@
+import type { Metadata } from "next";
 import GridWrapper from "@/components/layout/grid-wrapper";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Explore highlights from Sophia Tam's product design case studies, branding campaigns, and illustration commissions.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Sophia Tam Portfolio",
+    description:
+      "Highlights from Thomas Pink, The Edge newsletter, personalization report, and the Illustrator Corner commission.",
+    url: "/",
+    images: [
+      {
+        url: "/home/pink.png",
+        width: 1200,
+        height: 900,
+        alt: "Cover for the Thomas Pink case study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sophia Tam Portfolio",
+    description:
+      "Product design, branding, and illustration work by Sophia Tam.",
+    images: ["/home/pink.png"],
+  },
+};
 
 export default async function Home() {
   return (
@@ -12,7 +41,7 @@ export default async function Home() {
           <Image
             className="w-full object-cover"
             src="/home/illustrator-corner.png"
-            alt="illustartor corner"
+            alt="Artwork feature for The Illustrator Corner commission"
             height={256}
             width={308}
             />
@@ -50,7 +79,7 @@ export default async function Home() {
                 <Image
                   className=" h-full w-full object-cover"
                   src="/home/pink.png"
-                  alt="thomas-pink"
+                  alt="Thomas Pink case study cover art"
                   width={534}
                   height={551}
                 />
@@ -72,7 +101,7 @@ export default async function Home() {
               <div className="h-full w-[196]">
                 <Image
                   src="/home/the-edge.png"
-                  alt="the edge newsletter"
+                  alt="The Edge newsletter design preview"
                   width={196}
                   height={260}
                 />
@@ -108,7 +137,7 @@ export default async function Home() {
                 <div className="w-full">
                   <Image
                     src="/home/report.png"
-                    alt="report"
+                    alt="Personalization report data visualization spread"
                     width={420}
                     height={106}
                   />

@@ -1,5 +1,34 @@
+import type { Metadata } from "next";
 import { Hero, FindingTheEdge } from "@/components/project/the-edge";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "The Edge Newsletter Campaign",
+  description:
+    "Branding and visual system for The Edge newsletter, expanding into CTA design and ABM ads.",
+  alternates: { canonical: "/project/the-edge" },
+  openGraph: {
+    title: "The Edge Newsletter Campaign",
+    description:
+      "Branding system for The Edge newsletter with CTA and ABM asset design.",
+    url: "/project/the-edge",
+    images: [
+      {
+        url: "/the-edge/image4.png",
+        width: 1200,
+        height: 900,
+        alt: "The Edge campaign visuals with glowing gradients",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Edge Newsletter Campaign",
+    description:
+      "Branding, CTA, and ABM design work for The Edge newsletter campaign.",
+    images: ["/the-edge/image4.png"],
+  },
+};
 
 export default async function TheEdge({
   searchParams,
@@ -48,7 +77,7 @@ export default async function TheEdge({
               src="/the-edge/image4.png"
               width={584}
               height={560}
-              alt=""
+              alt="The Edge campaign visuals showing CTA and ABM creative"
               className="object-fill"
             />
           </div>

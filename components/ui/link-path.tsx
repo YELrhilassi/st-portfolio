@@ -8,7 +8,7 @@ export default function LinkPath({ children,href }: { children: React.ReactNode,
   const path = usePathname().slice(1);
   console.log(path,href)
   return (
-    <Link href={href} className="w-fit">
+    <Link href={`/${href}`} className="w-fit">
     <div
       className={cn(
         "flex items-center w-full py-2 px-6 h-9 ",

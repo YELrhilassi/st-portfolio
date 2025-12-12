@@ -1,9 +1,38 @@
+import type { Metadata } from "next";
 import {
   AiToolSection,
   Hero,
 } from "@/components/project/personalization-report";
 import { cn } from "@/components/utils";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Personalization Report Case Study",
+  description:
+    "How Sophia Tam transformed complex personalization data into scannable infographics and an AI-driven visual system.",
+  alternates: { canonical: "/project/personalization-report" },
+  openGraph: {
+    title: "Personalization Report Case Study",
+    description:
+      "Designing data visualizations and AI tooling for a personalization report.",
+    url: "/project/personalization-report",
+    images: [
+      {
+        url: "/report/draft5.png",
+        width: 1200,
+        height: 900,
+        alt: "Personalization report final infographic layout",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Personalization Report Case Study",
+    description:
+      "Designing digestible data storytelling for an AI-driven personalization report.",
+    images: ["/report/draft5.png"],
+  },
+};
 
 export default async function ({ searchParams }: { searchParams: any }) {
   const search = await searchParams;
@@ -60,21 +89,21 @@ export default async function ({ searchParams }: { searchParams: any }) {
                   <div className="relative h-full w-[33%]">
                     <img
                       src="/report/info1.jpg"
-                      alt=""
+                      alt="Inspiration moodboard for data visualization styles"
                       className="object-cover h-full w-full"
                     />
                   </div>
                   <div className="relative h-full w-[33%]">
                     <img
                       src="/report/info2.jpg"
-                      alt=""
+                      alt="Infographic reference examples collected for the project"
                       className="object-cover h-full w-full"
                     />
                   </div>
                   <div className="relative h-full w-[33%]">
                     <img
                       src="/report/info3.jpg"
-                      alt=""
+                      alt="Data visualization inspiration focusing on clarity and color usage"
                       className="object-cover h-full w-full"
                     />
                   </div>
@@ -88,7 +117,7 @@ export default async function ({ searchParams }: { searchParams: any }) {
                   <div className="relative h-full w-full">
                     <img
                       src="/report/info4.png"
-                      alt=""
+                      alt="First draft of personalization report data charts"
                       className="object-cover h-full w-full"
                     />
                   </div>
@@ -102,7 +131,7 @@ export default async function ({ searchParams }: { searchParams: any }) {
                   <div className="relative h-full w-full">
                     <img
                       src="/report/info5.png"
-                      alt=""
+                      alt="Second draft exploring alternative infographic layouts"
                       className="object-cover h-full w-full"
                     />
                   </div>
@@ -116,13 +145,13 @@ export default async function ({ searchParams }: { searchParams: any }) {
             </div>
             <div className="grid grid-cols-2 gap-2 h-full">
               <div>
-                <img src="/report/draft3.png" />
+                <img src="/report/draft3.png" alt="Data visualization draft focusing on clarity" />
               </div>
               <div>
-                <img src="/report/draft4.png" />
+                <img src="/report/draft4.png" alt="Infographic iteration highlighting personalization insights" />
               </div>
               <div className="col-span-full ">
-                <img src="/report/draft5.png" className="h-full" />
+                <img src="/report/draft5.png" className="h-full" alt="Final infographic layout for the personalization report" />
               </div>
               
             </div>

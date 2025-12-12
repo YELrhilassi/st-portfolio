@@ -1,20 +1,17 @@
 "use client";
 import { cn } from "@/components/utils/cn";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { PeelWrapper, PeelTop, PeelBack } from "react-peel";
-import {
-  LargeStaticPeel,
-  MediumStaticPeel,
-  SmallStaticPeel,
-} from "./static-tab";
+import { SmallStaticPeel } from "./static-tab";
 
 type TFlyerTab = {
   handle: string;
   icon?: React.JSX.Element;
   isStatic?: boolean;
+  link: string;
 };
 
-export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
+export default function FlayerTab({ handle, icon, link }: TFlyerTab) {
   const [isOpened, setIsOpened] = useState(false);
 
   //
@@ -40,8 +37,7 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
 
       setIsOpened(true);
       setTimeout(() => {
-        const socialLink = "https://twitter.com/username";
-        window.open(socialLink, "_blank");
+        window.open(link, "_blank");
       }, 1000);
     }
   };
@@ -62,9 +58,7 @@ export default function FlayerTab({ handle, icon, isStatic }: TFlyerTab) {
         handleDrag={handlePeelDrag}
         drag
       >
-        <PeelTop
-          className="shadow-lg p-3 pt-4 bg-red-100 bg-paper bg-blend-multiply hover:cursor-grab"
-        >
+        <PeelTop className="shadow-lg p-3 pt-4 bg-red-100 bg-paper bg-blend-multiply hover:cursor-grab">
           <p className="flex flex-col leading-5 tracking-wider text-gray-700 font-bold uppercase">
             <span>Also</span>
             <span>Find me</span>

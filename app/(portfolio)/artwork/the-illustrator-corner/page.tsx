@@ -1,8 +1,37 @@
-import { ArrowBigRight, ArrowDown10, ArrowRight, ArrowRightIcon, ArrowRightLeft, LucideArrowRight, MoveRight } from "lucide-react";
+import type { Metadata } from "next";
+import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function () {
+export const metadata: Metadata = {
+  title: "The Illustrator Corner",
+  description:
+    "Event illustration commission for Vancouver Cookbook Club, featuring live paintings and postcard giveaways.",
+  alternates: { canonical: "/artwork/the-illustrator-corner" },
+  openGraph: {
+    title: "The Illustrator Corner",
+    description:
+      "Live event illustration for Vancouver Cookbook Club by Sophia Tam.",
+    url: "/artwork/the-illustrator-corner",
+    images: [
+      {
+        url: "/corner/image1.png",
+        width: 1200,
+        height: 900,
+        alt: "Event illustration collage from The Illustrator Corner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Illustrator Corner",
+    description:
+      "Live event illustration commission by Sophia Tam for Vancouver Cookbook Club.",
+    images: ["/corner/image1.png"],
+  },
+};
+
+export default function IllustratorCorner() {
   return (
     <div className="grid grid-cols-[repeat(2,auto)] mt-20 text-lg">
       <div className="grid grid-cols-4 gap-10">
@@ -23,16 +52,16 @@ export default function () {
           <span className="uppercase font-semibold text-[16px] tracking-wider">other artwork</span>
           <div className=" h-full w-full grid gap-8">
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork3-3.png" alt="" fill className="object-cover" />
+              <Image src="/artwork/artwork3-3.png" alt="Painting postcard thumbnail" fill className="object-cover" />
             </Link>
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork2-1.png" alt="" fill className="object-cover" />
+              <Image src="/artwork/artwork2-1.png" alt="Portrait illustration thumbnail" fill className="object-cover" />
             </Link>
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork3-1.png" alt="" fill className="object-cover" />
+              <Image src="/artwork/artwork3-1.png" alt="Colorful abstract portrait thumbnail" fill className="object-cover" />
             </Link>
             <Link href="/artwork" className="relative">
-              <Image src="/artwork/artwork1.png" alt="" fill className="object-cover" />
+              <Image src="/artwork/artwork1.png" alt="Illustration collage thumbnail" fill className="object-cover" />
             </Link>
           </div>
           <div className="flex items-center justify-end w-full pt-4 mt-4 border-t ">
@@ -45,7 +74,7 @@ export default function () {
           <figure className="relative col-span-full h-full">
             <Image
               src="/corner/image1.png"
-              alt=""
+              alt="Event illustration capturing dessert table and guests"
               width={869}
               height={459}
               className="w-full h-auto object-cover"
@@ -55,7 +84,7 @@ export default function () {
             <figure>
               <Image
                 src="/corner/image2.png"
-                alt=""
+                alt="Sophia Tam illustrating at the Vancouver Cookbook Club event"
                 width={417}
                 height={388}
                 className="w-full"
@@ -93,7 +122,7 @@ export default function () {
                 <div className="col-span-full">
                   <Image
                     src="/corner/image3.png"
-                    alt=""
+                    alt="Event attendee receiving illustrated postcard"
                     width={420}
                     height={246}
                     className="w-full"
@@ -102,21 +131,21 @@ export default function () {
                 <div className="col-span-full flex justify-between gap-3 h-[153]">
                   <Image
                     src="/corner/image4.png"
-                    alt=""
+                    alt="Painting postcard featuring cake illustration"
                     width={131}
                     height={153}
                     className="w-full h-full object-cover"
                   />
                   <Image
                     src="/corner/image5.png"
-                    alt=""
+                    alt="Painting postcard with floral motif"
                     width={131}
                     height={153}
                     className="w-full h-full object-cover"
                   />
                   <Image
                     src="/corner/image6.png"
-                    alt=""
+                    alt="Painting postcard gifted to event guest"
                     width={131}
                     height={153}
                     className="w-full h-full object-cover"
