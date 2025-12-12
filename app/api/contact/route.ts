@@ -9,15 +9,17 @@ type ContactPayload = {
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const recipient = process.env.CONTACT_RECIPIENT_EMAIL;
-const fromAddress =
-  process.env.CONTACT_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
+const fromAddress = process.env.CONTACT_FROM_EMAIL;
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
-  if (!process.env.RESEND_API_KEY || !recipient) {
+  if (!process.env.RESEND_API_KEY || !recipient || !fromAddress) {
     return NextResponse.json(
-      { error: "Email service is not configured." },
+      {
+        error:
+          "Email service is not configured. Set RESEND_API_KEY, CONTACT_RECIPIENT_EMAIL, and CONTACT_FROM_EMAIL to a verified domain address.",
+      },
       { status: 500 },
     );
   }
