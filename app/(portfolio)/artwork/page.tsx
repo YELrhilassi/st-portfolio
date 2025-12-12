@@ -33,7 +33,7 @@ export default function Artwork() {
   return (
     <div className="">
       <div className="mt-20 mb-10">
-        <h1 className="text-center font-serif text-6xl">ARTWORK</h1>
+        <h1 className="text-center font-serif text-5xl">ARTWORK</h1>
       </div>
       <div className="grid grid-cols-3 gap-4">
         <div className="grid gap-4">

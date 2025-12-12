@@ -102,7 +102,7 @@ export default async function RootLayout({
 
       <body className="text-primary max-w-7xl mx-auto h-full w-[1420px]">
         <Header date={now} className="mt-8 min-h-20" />
-        <main className="relative mt-6 h-full mb-40">{children}</main>
+        <main className="relative mt-6 h-full mb-20">{children}</main>
         <Footer />
       </body>
     </html>

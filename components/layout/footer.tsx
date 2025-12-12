@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t font-sans font-light">
+    <footer className="border-t-2 font-sans font-light">
       <div className="py-8">
         <ul className="flex gap-8">
           <li className="capitalize texl-lg">
@@ -21,7 +21,7 @@ export default function Footer() {
         </ul>
 
         {/* Bottom Bar */}
-        <div className="pt-5 flex justify-between items-center">
+        <div className="border-t mt-5 pt-2 flex justify-between items-center">
           <p className="text-sm text-muted-foreground">
             © 2025 Sophia Tam. All rights reserved.
           </p>

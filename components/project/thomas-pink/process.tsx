@@ -41,7 +41,7 @@ export function Process() {
             <div
               className="flex items-center justify-center gap-3 h-full w-full
           capitalize underline font-bold
-          bg-gray-400/70 mask-[url(/ui/bg-clip1.svg)] mask-no-repeat mask-cover
+          bg-[#C9C9C9] mask-[url(/ui/bg-clip1.svg)] mask-no-repeat mask-cover
           "
             >
               <span>Full case study</span>

@@ -14,7 +14,7 @@ export function AiToolSection() {
       </div>
       <div className="grid grid-cols-12 gap-4 mt-10">
         <div className="relative col-start-2 col-span-7 space-y-8 ml-auto ">
-          <h2 className="py-2! text-center text-lg font-sans! font-bold uppercase tracking-wider bg-gray-400/70">
+          <h2 className="py-2! text-center text-lg font-sans! font-bold uppercase tracking-wider bg-[#C9C9C9]">
             design development
           </h2>
           <div className="flex gap-3 ">

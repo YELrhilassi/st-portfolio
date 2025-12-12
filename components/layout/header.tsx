@@ -12,17 +12,17 @@ type THeader = {
 export default function Header({ className: clx, date }: THeader) {
   return (
     <header className={cn("font-serif border-slate-700", clx)}>
-      <div className="flex items-center min-h-20 font-sans tracking-wider text-lg border-y my-1">
-        <ul className="flex-1 flex gap-3 leading-4 text-xl font-bolder font-serif capitalize pl-2">
+      <div className="flex items-center min-h-20 font-sans tracking-wider text-lg border-y border-b-2 my-1">
+        <ul className="flex-1 flex gap-3 leading-4 text-xl font-bolder font-serif capitalize pl-2 tracking-tight">
           <LinkPath href="about">about</LinkPath>
           <LinkPath href="artwork">Other artwork</LinkPath>
         </ul>
         <div className="flex-2 flex justify-around py-4 border-x my-1 uppercase">
-          <Link href="/" className="text-5xl font-serif">
+          <Link href="/" className="text-6xl font-serif">
             Sophia Tam
           </Link>
         </div>
-        <ul className=" flex-1 flex flex-col gap-2 items-end font-serif leading-4">
+        <ul className=" flex-1 flex flex-col gap-2 items-end font-serif leading-4 tracking-tight">
           <div className="flex gap-2 mb-2">
             <span>Connect with us at:</span>
             <div className="flex gap-1.5">
