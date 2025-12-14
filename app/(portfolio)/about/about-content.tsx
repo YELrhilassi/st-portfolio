@@ -38,28 +38,10 @@ const items = [
     link: "https://www.instagram.com/jane_dooodle",
   },
   {
-    icon: <Instagram />,
-    handle: "@jane_dooodle",
-    isStatic: true,
-    link: "https://www.instagram.com/jane_dooodle",
-  },
-  {
     icon: <Linkedin />,
     handle: "@sophiattw",
-    isStatic: false,
-    link: "https://www.linkedin.com/in/sophiattw/",
-  },
-  {
-    icon: <Linkedin />,
-    handle: "@sophiattw",
-    isStatic: false,
-    link: "https://www.linkedin.com/in/sophiattw/",
-  },
-  {
-    icon: <Instagram />,
-    handle: "@jane_dooodle",
     isStatic: true,
-    link: "https://www.instagram.com/jane_dooodle",
+    link: "https://www.linkedin.com/in/sophiattw/",
   },
   {
     icon: <Instagram />,
@@ -70,7 +52,7 @@ const items = [
   {
     icon: <Linkedin />,
     handle: "@sophiattw",
-    isStatic: true,
+    isStatic: false,
     link: "https://www.linkedin.com/in/sophiattw/",
   },
   {
@@ -79,11 +61,31 @@ const items = [
     isStatic: true,
     link: "https://www.instagram.com/jane_dooodle",
   },
+ 
+  {
+    icon: <Linkedin />,
+    handle: "@sophiattw",
+    isStatic: false,
+    link: "https://www.linkedin.com/in/sophiattw/",
+  },
+   {
+    icon: <Instagram />,
+    handle: "@jane_dooodle",
+    isStatic: true,
+    link: "https://www.instagram.com/jane_dooodle",
+  },
+ 
   {
     icon: <Linkedin />,
     handle: "@sophiattw",
     isStatic: true,
     link: "https://www.linkedin.com/in/sophiattw/",
+  },
+   {
+    icon: <Instagram />,
+    handle: "@jane_dooodle",
+    isStatic: true,
+    link: "https://www.instagram.com/jane_dooodle",
   },
 ];
 

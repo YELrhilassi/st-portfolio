@@ -1,5 +1,5 @@
 import { ImagePreview, ImageThumbnail, PeelButton } from "@/components/ui";
-import {  SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 export async function Hero({ searchParams }: { searchParams: any }) {
   const previewSrc = searchParams.preview || "/report/image1.png";
@@ -63,15 +63,15 @@ export async function Hero({ searchParams }: { searchParams: any }) {
       <div className="col-start-1 col-span-2 pr-20 pt-5">
         <p className="text-lg pt-6 leading-6">
           <b>
-            Reports are of of the long-form content offer dive deep discussions
-            of current trendy topics.
+            Reports are one of the long-form content that offers dive deep
+            discussions of current trendy topics.
           </b>{" "}
           In this report, the tech leaders give insights into the surge of AI
           use in digital platform, supported with comprehensive statistics, case
           studies and researches. From design perspective, we also elevated
           design by learning and using new tools, such as: incorporating AI in
           brainstorming stage, utilizing colours and motifs to convey emotions,
-          and studying deeper about data design, introducing the apply digital
+          and studying deeper about data design, introducing the Apply Digital
           brand to a new elements.
         </p>
         <PeelButton

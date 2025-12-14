@@ -54,26 +54,26 @@ export default async function ({ searchParams }: { searchParams: any }) {
               Another main highlights of this report is the thorough researched
               datas. A challenge for us designers is to transform complex
               quantitative data into scannable, digestible infographics while
-              maintaining readability. To achieve such goal, I took initiative
-              to research and learning on data and infographics through
-              different channels: first, I had to familiarize myself about
-              characteristics of different data charts; Second, I talked to
-              experienced senior data designers and asked for feedbacks; Lastly,
-              I proactively look for inspirational examples on sites like Data
-              Viz Project , to widen my knowledge on the varieties of data
-              visuals.
+              maintaining readability.
+            </p>
+            <p>
+              To achieve such goal, I took initiative to research and learning
+              on data and infographics through different channels: I had to
+              first familiarize myself about characteristics of different data
+              charts; then, I talked to experienced senior data designers for
+              feedbacks; Lastly, I proactively look for inspirational examples
+              like Data Viz Project , to widen my knowledge on the varieties of
+              data visuals.
             </p>
             <p>
               This side-research is an invaluable opportunity to expand my
-              design skills. I learned that Data Design is far more than simply
-              styling numbers; it is a problem-solving mindset that requires
-              thoroughly understanding the raw data and its underlying meaning,
-              and efficiently converting those meanings in to easily
-              understandable graphics that communicate the core insight at a
-              glance. The teamwork and investment have contributed to the
-              success, receiving positive responses from Subject Matter Experts,
-              and the new design elements were adopted into other media
-              projects.
+              design skills. Through learning about Data Design as a
+              problem-solving mindset, I now take extra preparation to ensure
+              the raw data can be efficiently translated to easily
+              understandable graphics at a glance. The teamwork and investment
+              have contributed to the success, receiving positive responses from
+              Subject Matter Experts, and the new design elements were adopted
+              into other media projects.
             </p>
           </div>
           <div className="col-span-4 flex flex-col gap-5">
@@ -145,15 +145,24 @@ export default async function ({ searchParams }: { searchParams: any }) {
             </div>
             <div className="grid grid-cols-2 gap-2 h-full">
               <div>
-                <img src="/report/draft3.png" alt="Data visualization draft focusing on clarity" />
+                <img
+                  src="/report/draft3.png"
+                  alt="Data visualization draft focusing on clarity"
+                />
               </div>
               <div>
-                <img src="/report/draft4.png" alt="Infographic iteration highlighting personalization insights" />
+                <img
+                  src="/report/draft4.png"
+                  alt="Infographic iteration highlighting personalization insights"
+                />
               </div>
               <div className="col-span-full ">
-                <img src="/report/draft5.png" className="h-full" alt="Final infographic layout for the personalization report" />
+                <img
+                  src="/report/draft5.png"
+                  className="h-full"
+                  alt="Final infographic layout for the personalization report"
+                />
               </div>
-              
             </div>
           </div>
         </div>

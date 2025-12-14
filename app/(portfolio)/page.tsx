@@ -5,21 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Sophia Tam",
   description:
     "Explore highlights from Sophia Tam's product design case studies, branding campaigns, and illustration commissions.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Sophia Tam Portfolio",
     description:
-      "Highlights from Thomas Pink, The Edge newsletter, personalization report, and the Illustrator Corner commission.",
+      "Product design, branding, and illustration work by Sophia Tam.",
     url: "/",
     images: [
       {
-        url: "/home/pink.png",
+        url: "/about-profile.png",
         width: 1200,
         height: 900,
-        alt: "Cover for the Thomas Pink case study",
+        alt: "Profile illustration",
       },
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Sophia Tam Portfolio",
     description:
       "Product design, branding, and illustration work by Sophia Tam.",
-    images: ["/home/pink.png"],
+    images: ["/about-profile.png"],
   },
 };
 
